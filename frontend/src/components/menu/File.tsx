@@ -1,6 +1,7 @@
 import { useHotkeys } from 'react-hotkeys-hook'
 import Dropdown from './dropdown/Dropdown'
 import { useRef } from 'react';
+import { postSlugs } from '../../service/api';
 
 function File() {
     const inputRef = useRef<HTMLInputElement>(null);
@@ -8,8 +9,11 @@ function File() {
         inputRef.current?.click();
     };
 
-    const handleFile = (file: globalThis.File) => {
+    async function handleFile(file: globalThis.File) {
         console.log("Importando:", file.name);
+        const data = await postSlugs(file);
+
+        localStorage.setItem("slugs", JSON.stringify(data));
     };
 
     const exportFile = () => {
@@ -58,14 +62,16 @@ function File() {
                 }}
             />
             <Dropdown
-            label='teste'
+            label='File'
             actions={[{
                 label: "Import",
-                onClick: () => inputRef.current?.click()
+                onClick: () => inputRef.current?.click(),
+                shortcut: "Ctril + i"
             },
             {
                 label: "Export",
-                onClick: exportFile
+                onClick: exportFile,
+                shortcut: "Ctrl + Shift + E"
             }
             ]}
             />

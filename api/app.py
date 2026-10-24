@@ -1,12 +1,14 @@
 import json
 
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from flasgger import Swagger
 
 from service import BddfPayloadError, process_bddf_request
 
 
 app = Flask(__name__)
+CORS(app, origins="http://localhost:5173")
 
 swagger = Swagger(app)
 

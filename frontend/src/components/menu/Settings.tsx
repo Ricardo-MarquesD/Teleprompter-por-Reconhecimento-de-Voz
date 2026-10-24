@@ -13,7 +13,7 @@ function Settings() {
     return (
         <>
             <Dropdown
-                label="Configurações"
+                label="Settings"
                 actions={[
                     {
                         label: "Entradas de áudio",

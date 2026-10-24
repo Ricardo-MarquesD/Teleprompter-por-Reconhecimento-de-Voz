@@ -14,6 +14,7 @@ function File() {
         const data = await postSlugs(file);
 
         localStorage.setItem("slugs", JSON.stringify(data));
+        window.dispatchEvent(new Event("slugs-updated"));
     };
 
     const exportFile = () => {

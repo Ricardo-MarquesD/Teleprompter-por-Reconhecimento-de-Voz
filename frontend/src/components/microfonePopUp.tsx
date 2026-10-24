@@ -1,22 +1,11 @@
 import { useEffect, useState } from "react";
+import {
+  type AudioInputConfig,
+  loadAudioInputConfigs,
+  STORAGE_KEY,
+} from "../lib/audioInputStorage";
 
-export type AudioInputConfig = {
-  id: string;
-  deviceId: string;
-  label: string;
-  active: boolean;
-};
-
-const STORAGE_KEY = "audio-input-configs";
-
-function loadConfigs(): AudioInputConfig[] {
-  try {
-    const value = localStorage.getItem(STORAGE_KEY);
-    return value ? JSON.parse(value) : [];
-  } catch {
-    return [];
-  }
-}
+export type { AudioInputConfig };
 
 type AudioInputSettingsProps = {
   open: boolean;
@@ -34,7 +23,7 @@ export function AudioInputSettings({
   useEffect(() => {
     if (!open) return;
 
-    setConfigs(loadConfigs());
+    setConfigs(loadAudioInputConfigs());
   }, [open]);
 
   useEffect(() => {
@@ -265,7 +254,7 @@ export function AudioInputSettings({
 
           {error && (
             <p
-              className="mt-4 break-words text-sm text-red-700 dark:text-red-300"
+              className="mt-4 wrap-break-word text-sm text-red-700 dark:text-red-300"
               role="alert"
             >
               {error}

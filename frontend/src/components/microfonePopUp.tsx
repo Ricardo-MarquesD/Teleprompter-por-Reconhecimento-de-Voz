@@ -131,7 +131,7 @@ export function AudioInputSettings({
       role="dialog"
       aria-modal="true"
       aria-labelledby="audio-settings-title"
-      className="fixed inset-0 z-[9999] flex items-center justify-center overflow-y-auto bg-black/60 p-3 sm:p-6"
+      className="fixed inset-0 z-9999 flex items-center justify-center overflow-y-auto bg-black/60 p-3 sm:p-6"
       onMouseDown={(event) => {
         if (event.target === event.currentTarget) {
           onClose();

@@ -5,6 +5,7 @@ import Settings from "../menu/Settings";
 
 type HeaderProps = {
   listening: boolean;
+  reconnecting?: boolean;
   speechError: string | null;
   transcript: string;
   isSpeechSupported: boolean;
@@ -15,6 +16,7 @@ type HeaderProps = {
 
 function Header({
   listening,
+  reconnecting = false,
   speechError,
   transcript,
   isSpeechSupported,
@@ -28,6 +30,7 @@ function Header({
       <Settings />
       <SpeechCaptureButton
         listening={listening}
+        reconnecting={reconnecting}
         error={speechError}
         transcript={transcript}
         isSupported={isSpeechSupported}

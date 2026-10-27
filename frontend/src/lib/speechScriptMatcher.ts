@@ -1,144 +1,96 @@
 const PHRASE_WINDOW = 4;
-const LOOKAHEAD = 2;
+const RECOVERY_SCORE = 3;
+const DIVERGE_SCORE = 2; // score < 2 → improvisa; score === 2 → mantém
 
 export type FollowState = {
   cursor: number;
   improvising: boolean;
-  /** Quantas palavras faladas já foram consumidas pelo cursor. */
-  spokenIndex: number;
 };
 
 export const INITIAL_FOLLOW_STATE: FollowState = {
   cursor: 0,
   improvising: false,
-  spokenIndex: 0,
 };
 
-export function indexOfSequence(
-  haystack: string[],
-  needle: string[],
-  from = 0,
-): number {
-  if (needle.length === 0 || haystack.length < needle.length) {
-    return -1;
+/** Quantas posições coincidem (ordem importa). */
+export function positionalScore(a: string[], b: string[]): number {
+  const n = Math.min(a.length, b.length);
+  let score = 0;
+  for (let i = 0; i < n; i++) {
+    if (a[i] === b[i]) score += 1;
+  }
+  return score;
+}
+
+export function bestScriptWindow(
+  scriptWords: string[],
+  spoken4: string[],
+  fromIndex: number,
+): { index: number; score: number } {
+  let best = { index: -1, score: -1 };
+
+  if (spoken4.length < PHRASE_WINDOW || scriptWords.length < PHRASE_WINDOW) {
+    return best;
   }
 
-  outer: for (let i = from; i <= haystack.length - needle.length; i++) {
-    for (let j = 0; j < needle.length; j++) {
-      if (haystack[i + j] !== needle[j]) {
-        continue outer;
-      }
+  const start = Math.max(0, fromIndex);
+  const last = scriptWords.length - PHRASE_WINDOW;
+
+  for (let i = start; i <= last; i++) {
+    const window = scriptWords.slice(i, i + PHRASE_WINDOW);
+    const score = positionalScore(spoken4, window);
+    if (score > best.score) {
+      best = { index: i, score };
     }
-    return i;
   }
 
-  return -1;
+  return best;
 }
 
 /**
- * Avança o cursor palavra a palavra.
- * Se 4 palavras seguidas divergirem do roteiro → interpretação.
- * Volta ao roteiro quando uma sequência de 4 palavras bater de novo.
+ * Acompanha o roteiro com métrica de 4 palavras:
+ * score >= 3 → no roteiro / recupera; score < 2 → improvisa; score === 2 → mantém.
  */
 export function followSpokenScript(
   scriptWords: string[],
   spokenWords: string[],
   previous: FollowState = INITIAL_FOLLOW_STATE,
 ): FollowState {
-  if (scriptWords.length === 0) {
-    return previous;
-  }
-
-  if (spokenWords.length === 0) {
+  if (scriptWords.length === 0 || spokenWords.length === 0) {
     return previous;
   }
 
   let { cursor, improvising } = previous;
-  let spokenIndex = previous.spokenIndex;
 
-  // Reinício do STT pode encolher a lista; realinha o índice.
-  if (spokenIndex > spokenWords.length) {
-    spokenIndex = Math.max(0, spokenWords.length - PHRASE_WINDOW);
+  // Com menos de 4 palavras: avanço simples sem togglear improviso.
+  if (spokenWords.length < PHRASE_WINDOW) {
+    const last = spokenWords[spokenWords.length - 1];
+    if (!improvising && cursor < scriptWords.length && scriptWords[cursor] === last) {
+      cursor += 1;
+    } else if (
+      !improvising &&
+      cursor + 1 < scriptWords.length &&
+      scriptWords[cursor + 1] === last
+    ) {
+      cursor += 2;
+    }
+
+    console.log("[follow]", { score: null, cursor, improvising, mode: "warmup" });
+    return { cursor, improvising };
   }
 
-  if (improvising) {
-    if (spokenWords.length < PHRASE_WINDOW) {
-      return { cursor, improvising: true, spokenIndex: spokenWords.length };
-    }
+  const spoken4 = spokenWords.slice(-PHRASE_WINDOW);
+  const searchFrom = improvising ? 0 : Math.max(0, cursor - PHRASE_WINDOW);
+  const { index, score } = bestScriptWindow(scriptWords, spoken4, searchFrom);
 
-    const phrase = spokenWords.slice(-PHRASE_WINDOW);
-    const recovered = indexOfSequence(scriptWords, phrase, 0);
-    if (recovered >= 0) {
-      return {
-        cursor: recovered + phrase.length,
-        improvising: false,
-        spokenIndex: spokenWords.length,
-      };
-    }
-
-    return {
-      cursor,
-      improvising: true,
-      spokenIndex: spokenWords.length,
-    };
+  if (score >= RECOVERY_SCORE && index >= 0) {
+    cursor = index + PHRASE_WINDOW;
+    improvising = false;
+  } else if (score < DIVERGE_SCORE) {
+    improvising = true;
   }
+  // score === 2 → mantém cursor e improvising
 
-  let missStreak = 0;
-
-  while (spokenIndex < spokenWords.length && cursor < scriptWords.length) {
-    const word = spokenWords[spokenIndex];
-    let matched = false;
-
-    for (let skip = 0; skip <= LOOKAHEAD; skip++) {
-      const target = cursor + skip;
-      if (target >= scriptWords.length) break;
-      if (scriptWords[target] === word) {
-        cursor = target + 1;
-        matched = true;
-        missStreak = 0;
-        break;
-      }
-    }
-
-    spokenIndex += 1;
-
-    if (!matched) {
-      missStreak += 1;
-      if (missStreak >= PHRASE_WINDOW) {
-        const phrase = spokenWords.slice(
-          Math.max(0, spokenIndex - PHRASE_WINDOW),
-          spokenIndex,
-        );
-        const near = indexOfSequence(
-          scriptWords,
-          phrase,
-          Math.max(0, cursor - PHRASE_WINDOW),
-        );
-        if (near >= 0) {
-          cursor = near + phrase.length;
-          missStreak = 0;
-          continue;
-        }
-
-        const anywhere = indexOfSequence(scriptWords, phrase, 0);
-        if (anywhere >= 0) {
-          cursor = anywhere + phrase.length;
-          missStreak = 0;
-          continue;
-        }
-
-        return {
-          cursor,
-          improvising: true,
-          spokenIndex,
-        };
-      }
-    }
-  }
-
-  return {
-    cursor,
-    improvising: false,
-    spokenIndex,
-  };
+  console.log("[follow]", { score, windowIndex: index, cursor, improvising });
+  return { cursor, improvising };
 }

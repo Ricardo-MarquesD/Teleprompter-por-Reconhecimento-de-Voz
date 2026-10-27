@@ -11,6 +11,9 @@ import {
 } from "../lib/speechScriptMatcher";
 import type { Block } from "../service/api";
 
+/** Evita reprocessar transcript enorme a cada interim. */
+const SPOKEN_TAIL = 32;
+
 export function useScriptFollow(
   block: Block | null,
   transcript: string,
@@ -32,7 +35,7 @@ export function useScriptFollow(
       return;
     }
 
-    const spoken = tokenizeSpoken(transcript);
+    const spoken = tokenizeSpoken(transcript).slice(-SPOKEN_TAIL);
     setFollow((previous) =>
       followSpokenScript(prepared.scriptWords, spoken, previous),
     );

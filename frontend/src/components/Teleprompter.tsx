@@ -16,6 +16,7 @@ export function Teleprompter({
 }: TeleprompterProps) {
   const frameRef = useRef<HTMLDivElement>(null);
   const scrollerRef = useRef<HTMLDivElement>(null);
+  const lastScrolledCursorRef = useRef<number | null>(null);
   const [fullscreen, setFullscreen] = useState(false);
 
   const updateFullscreenState = useCallback(() => {
@@ -31,13 +32,17 @@ export function Teleprompter({
 
   useEffect(() => {
     if (operatorMode || improvising) return;
+    if (lastScrolledCursorRef.current === cursor) return;
 
     const current = scrollerRef.current?.querySelector(
       '[data-current-word="true"]',
     );
-    current?.scrollIntoView({
+    if (!current) return;
+
+    lastScrolledCursorRef.current = cursor;
+    current.scrollIntoView({
       block: "center",
-      behavior: "smooth",
+      behavior: "auto",
     });
   }, [cursor, improvising, lines, operatorMode]);
 

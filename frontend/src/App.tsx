@@ -45,6 +45,7 @@ function App() {
     <div className="flex h-full min-h-0 flex-col">
       <Header
         listening={status === "listening"}
+        reconnecting={status === "reconnecting"}
         speechError={error}
         transcript={transcript}
         isSpeechSupported={isSupported}
@@ -60,7 +61,7 @@ function App() {
           onSelect={handleSelect}
         />
 
-        <main className="flex min-w-0 flex-1 items-center justify-end px-6 py-6 lg:px-10">
+        <main className="flex min-w-0 flex-1 items-center justify-center px-6 py-6 lg:px-10">
           <Teleprompter
             lines={lines}
             cursor={cursor}

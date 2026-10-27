@@ -1,5 +1,6 @@
 type SpeechCaptureButtonProps = {
   listening: boolean;
+  reconnecting?: boolean;
   error: string | null;
   transcript: string;
   isSupported: boolean;
@@ -9,31 +10,36 @@ type SpeechCaptureButtonProps = {
 
 export function SpeechCaptureButton({
   listening,
+  reconnecting = false,
   error,
   transcript,
   isSupported,
   onToggle,
   className = "",
 }: SpeechCaptureButtonProps) {
+  const active = listening || reconnecting;
+
   return (
     <div className={`flex min-w-0 flex-col gap-1 ${className}`.trim()}>
       <button
         type="button"
         className="rounded-md border border-current/25 px-3 py-2 text-sm hover:bg-black/5 disabled:cursor-not-allowed disabled:opacity-50 dark:hover:bg-white/10"
-        aria-pressed={listening}
+        aria-pressed={active}
         disabled={!isSupported}
         onClick={onToggle}
       >
-        {listening ? "Parar captura" : "Iniciar captura"}
+        {active ? "Parar captura" : "Iniciar captura"}
       </button>
 
-      {listening && (
+      {active && (
         <p
           className="max-w-xs truncate text-xs opacity-70"
           role="status"
           title={transcript || undefined}
         >
-          {transcript || "Ouvindo…"}
+          {reconnecting
+            ? "Reconectando reconhecimento…"
+            : transcript || "Ouvindo…"}
         </p>
       )}
 

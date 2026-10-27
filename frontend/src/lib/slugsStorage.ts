@@ -1,25 +1,21 @@
-import type { Program, SlugsResponse } from "../service/api";
+import type { SlugsResponse } from "../service/api";
 
-const SLUGS_KEY = "slugs";
+export const SLUGS_STORAGE_KEY = "slugs";
+export const SLUGS_UPDATED_EVENT = "slugs-updated";
 
 export function loadSlugs(): SlugsResponse | null {
   try {
-    const raw = localStorage.getItem(SLUGS_KEY);
-    if (!raw) return null;
-    const parsed = JSON.parse(raw) as SlugsResponse;
-    if (!parsed?.programs || !Array.isArray(parsed.programs)) {
-      return null;
-    }
+    const value = localStorage.getItem(SLUGS_STORAGE_KEY);
+    if (!value) return null;
+    const parsed = JSON.parse(value) as SlugsResponse;
+    if (!parsed || !Array.isArray(parsed.programs)) return null;
     return parsed;
   } catch {
     return null;
   }
 }
 
-export function getProgramByName(name: string): Program | undefined {
-  return loadSlugs()?.programs.find((program) => program.name === name);
-}
-
-export function listProgramNames(): string[] {
-  return loadSlugs()?.programs.map((program) => program.name) ?? [];
+export function saveSlugs(data: SlugsResponse): void {
+  localStorage.setItem(SLUGS_STORAGE_KEY, JSON.stringify(data));
+  window.dispatchEvent(new Event(SLUGS_UPDATED_EVENT));
 }

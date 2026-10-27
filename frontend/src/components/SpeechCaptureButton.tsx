@@ -1,43 +1,39 @@
-import { useUnifiedSpeechCapture } from "../hooks/useUnifiedSpeechCapture";
-
 type SpeechCaptureButtonProps = {
-  onTranscript: (text: string) => void;
+  listening: boolean;
+  error: string | null;
+  transcript: string;
+  isSupported: boolean;
+  onToggle: () => void;
   className?: string;
 };
 
 export function SpeechCaptureButton({
-  onTranscript,
+  listening,
+  error,
+  transcript,
+  isSupported,
+  onToggle,
   className = "",
 }: SpeechCaptureButtonProps) {
-  const {
-    status,
-    error,
-    partialFallback,
-    toggle,
-    isSupported,
-  } = useUnifiedSpeechCapture();
-
-  const listening = status === "listening";
-
   return (
-    <div className={`flex flex-col gap-1 ${className}`.trim()}>
+    <div className={`flex min-w-0 flex-col gap-1 ${className}`.trim()}>
       <button
         type="button"
         className="rounded-md border border-current/25 px-3 py-2 text-sm hover:bg-black/5 disabled:cursor-not-allowed disabled:opacity-50 dark:hover:bg-white/10"
         aria-pressed={listening}
         disabled={!isSupported}
-        onClick={() => toggle(onTranscript)}
+        onClick={onToggle}
       >
         {listening ? "Parar captura" : "Iniciar captura"}
       </button>
 
-      {partialFallback && listening && (
+      {listening && (
         <p
-          className="max-w-xs text-xs opacity-70"
+          className="max-w-xs truncate text-xs opacity-70"
           role="status"
+          title={transcript || undefined}
         >
-          O navegador limitou o reconhecimento simultâneo; a
-          transcrição pode usar apenas o microfone padrão.
+          {transcript || "Ouvindo…"}
         </p>
       )}
 

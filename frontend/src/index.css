@@ -1,4 +1,10 @@
 @import "tailwindcss";
+
+html,
+body,
+#root {
+  height: 100%;
+}
 @theme {
   --color-bg_dark: #16171d;
   --color-bg_white: #fffbeb;

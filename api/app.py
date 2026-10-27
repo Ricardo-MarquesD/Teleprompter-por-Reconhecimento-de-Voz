@@ -8,7 +8,7 @@ from service import BddfPayloadError, process_bddf_request
 
 
 app = Flask(__name__)
-CORS(app, origins="http://localhost:5173")
+CORS(app, origins=["http://localhost:5174","http://localhost:5173"])
 
 swagger = Swagger(app)
 

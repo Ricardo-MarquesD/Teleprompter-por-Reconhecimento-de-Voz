@@ -22,6 +22,9 @@ body,
   background-color: var(--color-bg_white);
   color: var(--color-w_font);
   border-color: var(--color-w_border);
+  button{
+    background-color: var(--color-bg_white);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,5 +32,8 @@ body,
     background-color: var(--color-bg_dark);
     color: var(--color-d_font);
     border-color: var(--color-d_border);
+    button{
+      background-color: var(--color-bg_dark);
+    }
   }
 }

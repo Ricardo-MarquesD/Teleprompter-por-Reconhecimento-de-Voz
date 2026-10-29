@@ -45,7 +45,7 @@ export function Teleprompter({
     lastScrolledCursorRef.current = cursor;
     current.scrollIntoView({
       block: "center",
-      behavior: "auto",
+      behavior: operatorMode ? "auto" : "smooth",
     });
   }, [cursor, improvising, lines, operatorMode]);
 
@@ -100,8 +100,8 @@ export function Teleprompter({
             ref={scrollerRef}
             className={`h-full w-full px-8 sm:px-12 ${
               operatorMode
-                ? "overflow-y-auto"
-                : "overflow-y-auto overscroll-contain"
+                ? "overflow-y-auto scrollbar-sm"
+                : "overflow-y-hidden"
             }`}
           >
             <div
@@ -113,7 +113,10 @@ export function Teleprompter({
                 color: layout.colorNormal || undefined,
               }}
             >
-              <div className="min-h-[42%] shrink-0 grow" aria-hidden="true" />
+              <div className={`shrink-0 ${
+                operatorMode ? "h-80" : "min-h-[42%] grow"
+              }`}
+              aria-hidden="true" />
               <div>
                 {lines.length === 0 ? (
                   <p className="text-base opacity-60">
@@ -169,7 +172,10 @@ export function Teleprompter({
                   ))
                 )}
               </div>
-              <div className="min-h-[42%] shrink-0 grow" aria-hidden="true" />
+              <div className={`shrink-0 ${
+                operatorMode ? "h-80" : "min-h-[42%] grow"
+              }`}
+              aria-hidden="true" />
             </div>
           </div>
 

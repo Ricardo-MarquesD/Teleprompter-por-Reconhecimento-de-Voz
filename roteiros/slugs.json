@@ -1,0 +1,2122 @@
+{
+    "programs": [
+        {
+            "blocks": [
+                {
+                    "pg_index": "0A",
+                    "program_name": "ABRE FRED 09/13",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{ABRE IMAG. PROC ??}}",
+                                "{{FRED EM OFF}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "É TERÇA-FEIRA!",
+                                "SÓ LEVANTA E VAI!"
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "BOM DIA PRA VOCÊ!",
+                                "BOM DIA DF",
+                                "BOM DIA PRO NOSSO VIZINHO, ENTORNO."
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "AGORA, SEIS HORAS E XX MINUTOS."
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "A TERÇA-FEIRA COMEÇA COM CÉU PARCIALMENTE NUBLADO E DEVE TER CHUVA AO LONGO DO DIA.",
+                                "ISSO DE ACORDO COM O CLIMATEMPO. INMET DESCARTA."
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "NÃO HÁ, ATÉ O MOMENTO ALERTAS LARANJA OU AMARELO DO INMET ATIVOS PARA O DF.",
+                                "MÁXIMA CHEGANDO A 30 GRAUS."
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "SISTEMAS DE ALTA PRESSÃO ATMOSFÉRICA ESTÃO PREDOMINANDO SOBRE O BRASIL COM EFEITO DIRETO DE REDUÇÃO DA UMIDADE NO AR E DAS CONDIÇÕES PARA CHUVA.",
+                                "E CONSEQUENTEMENTE TÁ MAIS QUENTE."
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "AS VIAS MAIS ENGARRAFADAS AGORA SÃO...."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "0B",
+                    "program_name": "ABRE LUÍSA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "ESPERO QUE ESTEJA TUDO BEM AÍ COM VOCÊ!",
+                                "LUISA DOYLE BOM DIA!"
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "{{LUISA}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "BOM DIA, FRED!",
+                                "...",
+                                "TEM MAIS IMAGEM CHEGANDO!"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "08",
+                    "program_name": "ESCALADA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "VAMOS AOS DESTAQUES DE HOJE!",
+                                "A GENTE COMEÇA COM IMAGENS DA INVASÃO A UMA CASA EM VICENTE PIRES NO ÚLTIMO FERIADO. O CASAL ESTAVA VIAJANDO QUANDO FOI SURPREENDIDO COM A NOTÍCIA DE QUE BANDIDOS ESTAVAM DENTRO DA RESIDÊNCIA COMETENDO FURTOS."
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "EM CEILÂNDIA, MAIS UMA SEQUÊNCIA DE CRIMES EM UMA LOJA DE CALÇADOS. OS COMERCIANTES DA REGIÃO COBRAM O POLICIAMENTO NA CIDADE."
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "{{FRED}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "E AS MEDIDAS DO GOVERNO FEDERAL PRA TENTAR CONTER A ALTA NOS PREÇOS DO DIESEL, DO GÁS DE COZINHA E DO QUEROSENE DE AVIÃO, COM A GUERRA NO IRÃ."
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "A GENTE FAZ UM ALERTA SOBRE UMA DOENÇA SILENCIOSA, QUE PODE SER FATAL: A TROMBOSE. MAIS DE 6 MIL CASOS DA DOENÇA SÃO REGISTRADOS TODOS OS ANOS AQUI NO DF."
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "{{FRED}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "A ANVISA ANUNCIOU NOVAS REGRAS DE FISCALIZAÇÃO PRA CONTER A VENDA DE CANETAS EMAGRECEDORAS FALSIFICADAS. PRODUTOS QUE PODEM COLOCAR EM RISCO A SAÚDE DAS PESSOAS."
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "HOJE COMEÇA A FASE DE GRUPOS DA LIBERTADORES.",
+                                "FLUMINENSE E CRUZEIRO SÃO OS PRIMEIROS REPRESENTANTES BRASILEIROS A ENTRAR EM CAMPO."
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "NOSSOS REPORTERES SEMPRE EM MOVIMENTO AO LONGO DO BOM DIA DF. VAMOS ACIONÁ-LOS!"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "08A",
+                    "program_name": "DESTAQUE /  ONÇA ATROPELADA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "MARÍLIA MARQUES, BOM DIA!"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "08B",
+                    "program_name": "DESTAQUE / TOTAL VILLE",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "GABRIEL BUOSI, BOM DIA!"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "09",
+                    "program_name": "VH_BDDF_ABERTURA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "TEM MUITO MAIS AQUI NO BOM DIA DF, QUE TÁ SÓ COMEÇANDO!",
+                                "FIQUE COM A GENTE"
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "{{ ABRE SOM VINHETA ABERTURA }}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "09A",
+                    "program_name": "MAIS TRÊS CAMÊRAS",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "AGORA TRÂNSITO"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "09B",
+                    "program_name": "EIXO MONUMENTAL",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "- E ATENÇÃO MOTORISTAS QUE FOREM PASSAR PELO EIXO MONUMENTAL DAQUI A POUCO.",
+                                "- O TRANSITO TENDE A FICAR MUITO RUIM A PARTIR DAS 8 DA MANHÃ.",
+                                "É QUE VAI TER MANIFESTAÇÃO DO ACAMPAMENTO TERRA LIVRE.",
+                                "- CERCA DE 7 MIL MANIFESTANTES DEVEM SE CONCENTRAR A PARTIR DAS 8H NO EIXO CULTURAL, NA ANTIGA FUNARTE, COM SAÍDA ÀS 9 DA MANHA EM DIREÇÃO À ESPLANADA DOS MINISTÉRIOS.",
+                                "O DESLOCAMENTO SERÁ PELA VIA N1, OU SEJA DO LADO NORTE. NO CONTRA FLUXO.",
+                                "- VAI TER OCUPAÇÃO DAS TRÊS FAIXAS MAIS PRÓXIMAS AO CANTEIRO CENTRAL — SENDO DUAS DESTINADAS AOS MANIFESTANTES E UMA PARA USO DAS FORÇAS DE SEGURANÇA. A CHEGADA ESTÁ PREVISTA PARA AS 10 DA MANHA."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "10",
+                    "program_name": "ROUBA COMÉRCIOS",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "QUATRO HOMENS ESVAZIARAM UMA LOJA DE CALÇADOS EM CEILÂNDIA. UM ENTROU COBERTO COM UMA MANTA. OUTRO, ENCAPUZADO. CADA UM FOI E VOLTOU — ATÉ NÃO SOBRAR NADA PRA LEVAR. FOI NA MADRUGADA DE SEXTA-FEIRA, NA QNN 1. O PREJUÍZO PASSOU DE 28 MIL REAIS. VAMOS VER A REPORTAGEM DA MICHELE MENDES."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "11",
+                    "program_name": "(V) FURTA TV",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "UM HOMEM FOI DETIDO ONTEM Á TARDE PELOS SEGURANÇAS DO METRÔ NA ESTAÇÃO PRAÇA DO RELÓGIO",
+                                "FOI LOGO DEPOIS DE ROUBAR UMA TV, NUMA LOJA DO COMÉRCIO NO CENTRO DE TAGUATINGA.",
+                                "UMA CÂMERA DE SEGURANÇA FILMOU A AÇÃO DO CRIMINOSO.",
+                                "O HOMEM PARA, OBSERVA, E RAPIDAMENTE PUXA A CAIXA COM UMA",
+                                "TV DE 32 POLEGADAS.",
+                                "O HOMEM FOI ENTREGUE A POLÍCIA PELOS SEGURANÇAS DO METRÔ"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "12",
+                    "program_name": "(AV) CHAMA FURTO CASA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "UM CASAL DE VICENTE PIRES TEVE UMA PÉSSIMA NOTÍCIA DURANTE O ÚLTIMO FERIADO. ENQUANTO ESTAVAM VIAJANDO ELES TIVERAM A CASA INVADIDA.",
+                                "FOI NA SEXTA-FEIRA PASSADA, POR VOLTA DAS QUATRO DA TARDE.",
+                                "A AÇÃO DOS BANDIDOS FOI REGISTRADA PELAS CÂMERAS DE SEGURANÇA DA CASA.",
+                                "SEGUNDO AS VÍTIMAS, FORAM LEVADAS TELEVISÕES, NOTEBOOKS, JOIAS E ELETRODOMÉSTICOS.",
+                                "UM PREJUÍZO QUE SOMA QUASE 40 MIL REAIS!. EMBORA A CASA FOSSE MONITORADA E CONTASSE COM ALARME, O SISTEMA FALHOU.",
+                                "AGORA A POLÍCIA TENTA IDENTIFICAR E PRENDER OS CRIMINOSOS.",
+                                "DAQUI A POUCO VAMOS CONTAR OS DETALHES DESSA HISTORIA."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "15",
+                    "program_name": "TEMPO",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{LUÍSA}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "E AGORA, PREVISÃO DO TEMPO!",
+                                "TEMPERATURA DE MOMENTO XX UMIDADE RELATIVA DO AR XX%",
+                                "MINIMA FOI DE 18°, MÁXIMA PODE CHEGAR A 30°.",
+                                "UMIDADE RELATIVA DO AR DE 40% A 99%.",
+                                "CHUVA - 15 MM."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "16",
+                    "program_name": "PARQUE DA CIDADE",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "- O PARQUE DA CIDADE VAI PASSAR POR ALGUMAS MELHORIAS.",
+                                "- EM BREVE, OS FREQUENTADORES VÃO TER BRINQUEDOS INCLUSIVOS, PRANCHAS DE COMUNICAÇÃO, LETREIROS PADRONIZADOS E UM RADAR DE VELOCIDADE PRA QUEM TREINA NA PISTA.",
+                                "- AS NOVIDADES FORAM APROVADAS PELO CONSELHO TÉCNICO E FAZEM PARTE DO NOVO PLANO DE USO E OCUPAÇÃO DO PARQUE.",
+                                "- O GASTO EM BRINQUEDOS ACESSÍVEIS CHEGA A 3 MILHÕES DE REAIS.",
+                                "E É HORA TAMBÉM DE OPINAR SOBRE A PRESENÇA DOS FOTÓGRAFOS, QUE SE MULTIPLICARAM POR LÁ RAPIDAMENTE."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "17",
+                    "program_name": "MUDA PARQUE CIDADE",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "- A REPORTAGEM É DE YASMIM PERNA."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "17A",
+                    "program_name": "PÉ MUDA PARQUE",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "JÁ ESTÁ ABERTA A CONSULTA PÚBLICA QUE DEBATE A ATUAÇÃO DOS FOTÓGRAFOS NO PARQUE DA CIDADE.",
+                                "É PELO SITE DA",
+                                "SECRETARIA DE ESPORTE DO GDF.",
+                                "COM ESSAS SUGESTÕES, O GOVERNO VAI ELABORAR AS NOVAS NORMAS."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "18",
+                    "program_name": "(AV) PASS 1A ( CANETAS EMAGRECEDORAS)",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED }}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "- A",
+                                "ANVISA",
+                                "ANUNCIOU QUE VAI AUMENTAR A FISCALIZAÇÃO DAS CANETAS EMAGRECEDORAS NO BRASIL."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "18A",
+                    "program_name": "(AV) PASS 1B (COMBUSTÍVEIS PREÇO)",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "VEJA TAMBEM",
+                                "O GOVERNO ANUNCIOU UMA SÉRIE DE MEDIDAS PRA TENTAR CONTER A ALTA NOS PREÇOS DO DIESEL, DO GÁS DE COZINHA E DO QUEROSENE DA AVIAÇÃO."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "18B",
+                    "program_name": "VH_BDDF_VOLTA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}",
+                                "{{LUÍSA}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "18C",
+                    "program_name": "********* INTERVALO 1 ******",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{ INTERVALO }}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "19",
+                    "program_name": "VH_VOLTA_BDDF",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{ VINHETA }}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "19A",
+                    "program_name": "EXTERNA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{ }}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "AGORA, SEIS E XX MINUTOS!!"
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "{{ LINK NARRA VIVO}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "BOM DIA DF ESTÁ DE VOLTA COM IMAGENS XXXXXXX",
+                                "CHAMA APP GLOBOPLAY",
+                                "CHAMA INSTAGRAM"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "20",
+                    "program_name": "MENSAGENS",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "TEM MENSAGENS CHEGANDO.."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "13",
+                    "program_name": "CHAMA TRANSPORTE ESCOLAR",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "- GERALDO BECKHER VAI",
+                                "-FALAR SOBRE OS DESAFIOS ENFRENTADOS POR MUITOS ESTUDANTES QUE USAM O TRANSPORTE ESCOLAR. ONDE VOCÊ ESTÁ?"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "14A",
+                    "program_name": "ARREDONDA TRANSPORTE ESCOLAR",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "24",
+                    "program_name": "DADOS TROMBOSE",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "AGORA A GENTE FAZ UM ALERTA SOBRE UMA DOENÇA SILENCIOSA, MAS QUE PODE SER FATAL: A TROMBOSE.",
+                                "DADOS DO IBGE APONTAM QUE TODOS OS ANOS, MAIS DE SEIS MIL CASOS DA DOENÇA SÃO REGISTRADOS. VEJA NA REPORTAGEM DA LUIZA GARONCE."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "24A",
+                    "program_name": "PÉ TROMBOSE",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "COMO VIMOS NA REPORTAGEM, A QUALQUER SINAL DOS SINTOMAS DA TROMBOSE, É MUITO IMPORTANTE PROCURAR AJUDA MÉDICA O QUANTO ANTES.",
+                                "POR ISSO, SE VOCÊ SENTIR DOR FORTE EM UMA DAS PERNAS, INCHAÇO REPENTINO OU VERMELHIDÃO OU ENTÃO DORES FORTES DE CABEÇA, QUE NÃO SÃO COMUNS PRA VOCÊ, PROCURE IMEDIATAMENTE UMA UPA OU O PRONTO-SOCORRO DE UM DOS HOSPITAIS REGIONAIS, COMO O DE BASE OU O HRAN."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "25",
+                    "program_name": "CANETAS EMAGRECE",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "A ANVISA LIGOU O SINAL DE ALERTA SOBRE A COMERCIALIZAÇÃO DAS CANETAS EMAGRECEDORAS.",
+                                "POR CAUSA DO AUMENTO DA FABRICAÇÃO IRREGULAR DESSES REMÉDIOS, A ANVISA ANUNCIOU NOVAS REGRAS DE FISCALIZAÇÃO PRA TIRAR DE CIRCULAÇÃO PRODUTOS FALSIFICADOS OU SEM QUALIDADE QUE PODEM COLOCAR A SAÚDE EM RISCO.",
+                                "O CERCO VAI FECHAR ATÉ PARA AS FARMÁCIAS DE MANIPULAÇÃO.",
+                                "VEJA OS DETALHES NA REPORTAGEM."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "21",
+                    "program_name": "ONÇA ATROPELADA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "- MARÍLIA MARQUES",
+                                "- A ONÇA VISTA ANDANDO PELAS RUAS DO LAGO NORTE FOI ENCONTRADA MORTA.",
+                                "- A GENTE FALOU SOBRE ESSE CASO ONTEM."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "22",
+                    "program_name": "WAZE + GIRO TRÂNSITO",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "AGORA, TRANSITO!"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "45",
+                    "program_name": "INCÊNDIOS DOMÉSTICOS",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "RAIANE SENA",
+                                "-OLHA, UM DADO QUE CHAMA ATENÇÃO E ACENDE UM ALERTA AQUI NO DF.",
+                                "-O NÚMERO DE INCÊNDIOS EM EDIFICAÇÕES AUMENTOU NOS ÚLTIMOS DOIS ANOS.",
+                                "-SÓ PRA TER UMA IDEIA, FORAM CENTENAS DE OCORRÊNCIAS REGISTRADAS PELOS BOMBEIROS, MUITAS DELAS DENTRO DE CASAS E COMÉRCIOS."
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "-POR ISSO, É MUITO IMPORTANTE REDOBRAR OS CUIDADOS COM TOMADAS, LÍQUIDOS INFLAMÁVEIS E VELAS ACESAS.",
+                                "-ATÉ PORQUE, SEGUNDO OS BOMBEIROS, NA MAIORIA DAS OCORRÊNCIAS, AS CAUSAS ERAM EVITÁVEIS, NÃO ERAM, RAIANE SENA?"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "45A",
+                    "program_name": "(V) INCENDIO ASA NORTE",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{{REPÓRTER}}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "45B",
+                    "program_name": "(V) JD. BOTÂNICO",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{{REPÓRTER}}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "45C",
+                    "program_name": "(V) ARAPOANGA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{{REPÓRTER}}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "45D",
+                    "program_name": "(V) NÚMEROS 24/25",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{{REPÓRTER}}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "45E",
+                    "program_name": "(V) NÚMEROS 2026",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{{REPÓRTER}}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "45F",
+                    "program_name": "(V) PRINCIPAIS CAUSAS",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{{REPÓRTER}}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "45G",
+                    "program_name": "BOMBEIROS FALAM",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{REPÓRTER}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "45H",
+                    "program_name": "ARREDONDA INCÊNDIOS",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{REPORTER IMPROVISA A VOLTA}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "46",
+                    "program_name": "(AV) PULA PONTE ONTEM",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED }}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "-UM GRUPO DE JOVENS FOI FLAGRADO SALTANDO DA PONTE JK.",
+                                "-ISSO ACONTECEU NA TARDE DO ÚLTIMO DOMINGO.",
+                                "-NAS IMAGENS, DOIS DELES APARECEM PENDURADOS NA ESTRUTURA DA PONTE, ENQUANTO OUTRO SE EQUILIBRA NO CORRIMÃO ANTES DE PULAR.",
+                                "- LOGO ABAIXO, ESTAVAM MUITOS BANHISTAS E PESSOAS PRATICANDO ATIVIDADES AQUÁTICAS.",
+                                "-UM SALVA-VIDAS CHEGOU A ALERTAR OS JOVENS , MAS ELES IGNORARAM A ORIENTAÇÃO.",
+                                "-SEGUNDO O CORPO DE BOMBEIROS, SALTAR DE PONTES NÃO É UMA ATIVIDADE RECREATIVA E REPRESENTA UM RISCO GRAVE.",
+                                "-ALÉM DISSO, DESOBEDECER A ORDEM DE UM AGENTE PÚBLICO PODE CONFIGURAR INFRAÇÃO, AINDA MAIS QUANDO COLOCA EM PERIGO A PRÓPRIA VIDA E A DE OUTRAS PESSOAS."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "46A",
+                    "program_name": "(AV) PULA PONTE 2022",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "E NÃO É A PRIMEIRA VEZ QUE ISSO ACONTECE.",
+                                "EM 2022 NÓS MOSTRAMOS AQUI OUTRO FLAGRANTE.",
+                                "UM HOMEM SUBIU NA MURETA DA PONTE E SE ARRISCOU NUM SALTO.",
+                                "DEPOIS, ELE CONTINOU NADANDO TRANQUILAMENTE NO LAGO PARANOÁ."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "46B",
+                    "program_name": "(AV) PULA PONTE MORTE",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "JÁ EM 2013, UM JOVEM MORREU DEPOIS DE PULAR DA PONTE JK.",
+                                "O RAPAZ TINHA 18 ANOS E RESOLVEU SALTAR NUMA BRINCADEIRA COM OS AMIGOS. A VÍTIMA, DENILSON LOURENÇO, CAIU DE COSTAS, NADOU UM POUCO, MAS DESAPARECEU. AS BUSCAS, NA ÉPOCA, DURARAM 11 HORAS E 10 MERGULHADORES TRABALHARAM NA OPERAÇÃO. O CORPO DO JOVEM FOI ENCONTRADO PERTO DA PONTE, NO SENTIDO LAGO SUL."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "46D",
+                    "program_name": "ALERTA BOMBEIROS",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "-NÓS CONVERSAMOS COM O PRIMEIRO SARGENTO DO CORPO DE BOMBEIROS SOBRE ESSE ASSUNTO.",
+                                "-ELE FEZ ALERTAS SOBRE O PERIGO DE SALTAR DA PONTE JK.",
+                                "-VAMOS ACOMPANHAR."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "47",
+                    "program_name": "MENSAGENS",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "MENSAGENS"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "28",
+                    "program_name": "FURTO CASA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{{FRED}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "NO ULTIMO FERIADO UM CASAL DE VICENTE PIRES TEVE UMA PÉSSIMA NOTÍCIA: A CASA DELES FOI INVADIDA ENQUANTO ELES VIAJAVAM.",
+                                "O CASAL FOI ALERTADO POR UM VIZINHO, QUE ATÉ CHAMOU A POLÍCIA, MAS OS BANDIDOS CONSEGUIRAM FUGIR .",
+                                "VAMOS VER A REPORTAGEM DA NAIARA SANTOS."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "28A",
+                    "program_name": "PÉ FURTO CASA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "NOSSA EQUIPE ACIONOU A PM PARA SABER O MOTIVO DA DEMORA DA CHEGADA DA EQUIPE ATÉ A CASA DO DANILO E DA MARILENE, MAS AINDA NÃO TIVEMOS RETORNO.",
+                                "O TELEFONE DO DISQUE-DENÚNCIA É O",
+                                "197",
+                                "."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "29A",
+                    "program_name": "(AV) FURTO RESIDÊNCIA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{ FRED }}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "E UM HOMEM FOI PRESO ONTEM À TARDE DEPOIS DE FURTAR UMA CASA NO NÚCLEO RURAL VARGEM BONITA.",
+                                "- A VÍTIMA CHEGOU EM CASA E ENCONTROU A CASA ARROMBADA",
+                                "- ELETRÔNICOS, JOIAS, ROUPAS E UMA BICICLETA FORAM LEVADOS.",
+                                "- AO TENTAR RECUPERAR A BICICLETA, QUE ESTAVA ABANDONADA EM UMA ÁREA DE MATA, O MORADOR AVISTOU DOIS SUSPEITOS EM FUGA.",
+                                "- UM DELES ATIROU DUAS VEZES PARA O ALTO PARA INTIMIDAR A VÍTIMA.",
+                                "- A PM MONTOU UM CERCO COM APOIO DO HELICÓPTERO E DO BATALHÃO DE CÃES.",
+                                "UM DOS SUSPEITOS FOI CAPTURADO O SEGUNDO SEGUE FORAGIDO."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "30",
+                    "program_name": "CHAMA OPERAÇÃO",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "MICHELE MENDES",
+                                "TEM OPERAÇÃO CONTRA O TRÁFICO DE DROGAS EM ANDAMENTO.",
+                                "MICHELE MENDES ACOMPANHA!"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "43",
+                    "program_name": "CHAMA ESPORTE",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "ESPORTE COM ANDRÉ BARROSO,"
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "{{ANDRÉ}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "43A",
+                    "program_name": "ARTE LIBERTADORES",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{LUÍSA}}HOJE TEM LIBERTADORES.",
+                                "{{ANDRÉ}}BOM DIA, PESSOAL.",
+                                "- VAI COMEÇAR A FASE DE GRUPOS DA",
+                                "MAIOR COMPETIÇÃO DO CONTINENTE.",
+                                "- SÃO 2 TIMES BRASILEIROS EM CAMPO",
+                                "HOJE À NOITE PELA PRIMERA RODADA.",
+                                "- O PRIMEIRO A ESTREAR É O FLUMINENSE,",
+                                "QUE VISITA O DEPORTIVO LA GUAIRA ÀS",
+                                "7 HORAS EM CARACAS.",
+                                "- JÁ O CRUZEIRO JOGA ÀS 9 DA NOITE NO",
+                                "EQUADOR CONTRA O BARCELONA DE",
+                                "GUAYAQUILL."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "43B",
+                    "program_name": "(V) PREPARA FLU",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{ANDRÉ}}VAMOS VER COMO ESSES",
+                                "2 TIMES CHEGAM PARA A ESTREIA NA",
+                                "LIBERTADORES.",
+                                "- O FLUMINENSE VIAJOU ONTEM PARA A",
+                                "VENEZUELA COM UM RETORNO",
+                                "IMPORTANTE.",
+                                "- O ATACANTE CANOBBIO FICOU DE FORA",
+                                "DOS ÚLTIMOS JOGOS (CONTRA CORINTHIANS",
+                                "E CORITIBA), MAS VOLTOU A SER RELACIONADO",
+                                "E VIAJOU COM O RESTO DA DELEGAÇÃO.",
+                                "- OUTROS JOGADORES QUE FORAM",
+                                "POUPADOS CONTRA O CORITIBA DEVEM",
+                                "VOLTAR AO TIME TITULAR.",
+                                "- SÃO OS CASOS DOS LATERAIS RENÊ E",
+                                "SAMUEL XAVIER; DO ZAGUEIRO JEMMES;",
+                                "DO MEIA LUCHO ACOSTA; E DOS ATACANTES",
+                                "SAVARINO E JOHN KENNEDY.",
+                                "- FACUNDO BERNAL E NONATO SÃO OS",
+                                "DESFALQUES."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "43C",
+                    "program_name": "(V) PREPARA CRU",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{ANDRÉ}}FALANDO AGORA DO",
+                                "CRUZEIRO.",
+                                "- O TÉCNICO ARTUR JORGE ESBOÇOU",
+                                "MUDANÇAS NO TIME TITULAR.",
+                                "- NA LATERAL, KAUÃ MORAES DEVE",
+                                "ENTRAR NA VAGA DO WILLIAM, QUE",
+                                "TEM SIDO CRITICADO PELA TORCIDA.",
+                                "- NO MEIO-CAMPO, LUCAS SILVA DEVE",
+                                "SER TITULAR NO LUGAR DO MATHEUS",
+                                "HENRIQUE.",
+                                "- O CRUZEIRO TEM VÁRIOS DESFALQUES.",
+                                "- OS MEIAS LUCAS ROMERO E WALLACE",
+                                "FORAM CORTADOS DA DELEGAÇÃO.",
+                                "- O GOLEIRO CÁSSIO E OS ATACANTES",
+                                "MARQUINHOS E SINISTERRA ESTÃO NO",
+                                "DEPARTAMENTO MÉDICO.",
+                                "- JÁ O ATACANTE BRUNO RODRIGUES",
+                                "NÃO VIAJOU POR OPÇÃO DA COMISSÃO",
+                                "TÉCNICA."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "43D",
+                    "program_name": "(AV) CONTRATA DINIZ",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}TEM NOVIDADE NO CORINTHIANS.",
+                                "{{ANDRÉ}}ONTEM TEVE A CONFIRMAÇÃO",
+                                "DO SUBSTITUTO DO DORIVAL JÚNIOR, QUE",
+                                "FOI DEMITIDO NO DOMINGO.",
+                                "- O TREINADOR ASSINOU COM O CLUBE",
+                                "PAULISTA ATÉ O FIM DE 2026.",
+                                "- DINIZ VAI COMANDAR DUAS SESSÕES DE",
+                                "TREINO ANTES DA ESTREIA DO CORINTHIANS",
+                                "NA LIBERTADORES, QUINTA-FEIRA, CONTRA",
+                                "O PLATENSE, LÁ NA ARGENTINA.",
+                                "- JUNTO DO FERNANDO DINIZ, CHEGA UMA",
+                                "COMISSÃO TÉCNICA COM DOIS AUXILIARES,",
+                                "UM PREPARADOR FÍSICO E UM ANALISTA.",
+                                "- DINIZ TEM PASSAGENS POR SÃO PAULO,",
+                                "SANTOS, VASCO, CRUZEIRO ATHLETICO",
+                                "PARANAESE E FLUMINENSE.",
+                                "- NESSE ÚLTIMO, VEIO A MAIOR CONQUISTA:",
+                                "A LIBERTADORES DE 2023.",
+                                "- ESSE TRABALHO LEVOU FERNANDO DINIZ",
+                                "À SELEÇÃO BRASILEIRA.",
+                                "- ELE COMANDOU A SELEÇÃO EM 6 PARTIDAS",
+                                "NAS ELIMINATÓRIAS PARA A COPA DO MUNDO."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "43E",
+                    "program_name": "(AV) SUPERLIGA B",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{LUÍSA}}ONTEM TEVE VÔLEI.",
+                                "{{ANDRÉ}}O TIME MASCULINO DO",
+                                "BRASÍLIA JOGOU PELA SEMIFINAL",
+                                "DA SÉRIE B DA SUPERLIGA.",
+                                "- FOI O SEGUNDO JOGO DA SÉRIE",
+                                "MELHOR DE 3 CONTRA O MONTES",
+                                "CLAROS.",
+                                "- O BRASÍLIA JÁ TINHA VENCIDO O",
+                                "PRIMEIRO JOGO.",
+                                "- ONTEM, O MONTES CLAROS FEZ",
+                                "3 SETS A 1, COM PARCIAIS DE",
+                                "25-19,",
+                                "20-25, 25-20 E 25-22",
+                                ".",
+                                "- COM O RESULTADO, O MONTES",
+                                "CLAROS FORÇOU A DISPUTA DO",
+                                "TERCEIRO JOGO.",
+                                "- A PARTIDA VAI SER NO SÁBADO,",
+                                "TAMBÉM EM MONTES CLAROS, E",
+                                "TAMBÉM COM TRANSMISSÃO DO",
+                                "SPORTV 2.",
+                                "- QUEM VENCER GARANTE VAGA",
+                                "NA PRIMVEIRA DIVISÃO DA SUPERLIGA",
+                                "MASCULINA PARA O ANO QUE VEM."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "43F",
+                    "program_name": "ARTE NBB",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}E O BASQUETE?",
+                                "{{ANDRÉ}}HOJE TEM O BRASÍLIA EM",
+                                "AÇÃO PELA RETA FINAL DO NBB.",
+                                "- O JOGO É AQUI NO NILSON NELSON",
+                                "CONTRA O SÃO JOSÉ.",
+                                "- A BOLA SOBE ÀS 8 E 15 DA NOITE.",
+                                "- OS INGRESSOS ESTÃO À VENDA NO",
+                                "APLICATIVO DO BRASÍLIA BASQUETE",
+                                "E CUSTAM A PARTIR DE 40 REAIS A",
+                                "MEIA.",
+                                "- CRIANÇAS ATÉ 10 ANOS NÃO PAGAM.",
+                                "- O BRASÍLIA TEM A QUARTA MELHOR",
+                                "CAMPANHA DA PRIMERA FASE, COM",
+                                "26 VITÓRIAS EM 35 JOGOS.",
+                                "- FALTAM 3 JOGOS PARA O BRASÍLIA",
+                                "ATÉ O FIM DA PRIMERA FASE - TODOS",
+                                "EM CASA."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "44",
+                    "program_name": "CHAMA INFLA TOTAL VILLE",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "GABRIEL BUOSI",
+                                "VAI FALAR DAQUI A POUCO SOBRE UM NOVO CONDOMÍNIO QUE ESTÁ SENDO ANUNCIADO ÀS MARGENS DA BR-040 E TÁ GERANDO PREOCUPAÇÃO DOS MORADORES DA REGIÃO.",
+                                "BUOSI"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "40",
+                    "program_name": "GIRO TRÂNSITO",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "AGORA, TRANSITO!"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "41",
+                    "program_name": "COMBUSTÍVEIS PREÇO",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "O GOVERNO FEDERAL ANUNCIOU UMA SÉRIE DE MEDIDAS PRA TENTAR CONTER A ALTA NOS PREÇOS DO DIESEL, DO GÁS DE COZINHA E DO QUEROSENE DA AVIAÇÃO."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "41A",
+                    "program_name": "PÉ COMBUSTÍVEIS",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "ESSAS MUDANÇAS ENTRAM EM VIGOR HOJE MESMO.",
+                                "ELAS VALEM PELOS PRÓXIMOS DOIS MESES — ABRIL E MAIO — MAS O PRAZO PODE SER RENOVADO LÁ NA FRENTE POR MAIS DOIS MESES SE FOR NECESSÁRIO."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "32",
+                    "program_name": "PONTE RUIM",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "- A GENTE FALA SOBRE OS OBSTÁCULOS ENFRENTADOS POR MUITOS ALUNOS PARA CHEGAR À ESCOLA.",
+                                "- O GLOBOCOP FEZ IMAGENS HÁ POUCO DE CEILÂNDIA, NO INCRA 9."
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "{{ GLOBOCOP }}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "ESSA É UMA REGIÃO RURAL E O ACESSO É FEITO POR UMA PONTE.",
+                                "ACONTECE QUE ESSA PONTE ESTÁ EM PÉSSIMAS CONDIÇÕES, SEGUNDO OS MORADORES.",
+                                "E A COMUNIDADE INTEIRA ACABA SENDO IMPACTADA, INCLUINDO OS ALUNOS.",
+                                "O JEITO É SE ARRISCAR, PASSANDO PELA PONTE, PEGAR UM CAMINHO ALTERNATIVO OU IR A PÉ."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "33",
+                    "program_name": "TRANSPORTE ESCOLAR",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "- GERALDO BECKHER, A DEFESA CIVIL CHEGOU A FAZER UMA VISTORIA NA PONTE, NÉ?"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "33H",
+                    "program_name": "ARREDONDA TRANSPORTE",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{REPORTER IMPROVISA A VOLTA}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "44",
+                    "program_name": "MENSAGENS",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "MENSAGENS"
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "{{ REDES SOCIAIS }}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "46",
+                    "program_name": "DESTAQUE G1 -  estágio",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "-VAMOS AGORA PARA UM DESTAQUE DO G1.",
+                                "-O CIEE ESTÁ COM VAGAS DE ESTÁGIO ABERTAS AQUI NO DF.",
+                                "-ESSAS VAGAS SÃO PARA ESTUDANTES DE NÍVEL MÉDIO E ENSINO SUPERIOR."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "47",
+                    "program_name": "DIA DA MULHER",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "-A DEFENSORIA PÚBLICA FAZ HOJE A MAIS UMA EDIÇÃO DO PROJETO “DIA DA MULHER”",
+                                "-ESSA AÇÃO VAI ATÉ AS DUAS DA TARDE, NO NUCLEO DA DEFENSORIA, NO SETOR COMERCIAL NORTE, PRÓXIMO AO HOSPITAL REGIONAL DA ASA NORTE.",
+                                "- O PROJETO OFERECE SERVIÇOS DE GRAÇA PARA MULHERES EM SITUAÇÃO DE VULNERABILIDADE.",
+                                "- ENTRE ELES, ATENDIMENTO JURÍDICO, ORIENTAÇÃO SOCIAL, SUPORTE PSICOLÓGICO, ALÉM DE SERVIÇOS DE SAÚDE E DEMANDAS HABITACIONAIS.",
+                                "-TAMBÉM HÁ EMISSÃO DE EXAMES DE DNA, MEDIAÇÃO DE CONFLITOS E SOLICITAÇÃO DE PASSE LIVRE PARA VÍTIMAS DE VIOLÊNCIA.",
+                                "- DURANTE O ATENDIMENTO, AS PARTICIPANTES PODEM CONTAR COM UMA BRINQUEDOTECA PARA OS FILHOS."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "53",
+                    "program_name": "MP X BRB",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "O MINISTÉRIO PÚBLICO PEDIU À JUSTIÇA QUE SUSPENSA OS EFEITOS DA LEI DISTRITAL QUE TRANSFERE IMÓVEIS PÚBLICOS PARA O BRB COBRIR O ROMBO BILIONÁRIO NO CAIXA, APÓS OS NEGÓCIOS COM O BANCO MASTER."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "53A",
+                    "program_name": "PÉ MP X BRB",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "AINDA SOBRE O BRB, ESTAVA PREVISTA PARA HOJE A IDA DO PRESIDENTE DO BANCO, NELSON SOUZA, À COMISSÃO DE CONSTITUIÇÃO E JUSTIÇA DA CÂMARA LEGILATIVA PARA DAR ESCLARECIMENTOS SOBRE A SITUAÇÃO DO BANCO.",
+                                "MAS O PRESIDENTE DO BRB ADIOU A IDA À CÂMARA. ELE PARTICIPARIA DE UMA AUDIÊNCIA PÚBLICA A CONVITE DO DEPUTADO THIAGO MANZONI, DO PL., PRESIDENTE DA COMISSÃO"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "53C",
+                    "program_name": "(AV) DEPOIMENTOS BRB",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "AGORA A GENTE TRAZ ATUALIZAÇÃO SOBRE A INVESTIGAÇÃO SOBRE A COMPRA DE CARTEIRAS SUPOSTAMENTE FRAUDULENTAS DO BANCO MASTER PELO BRB."
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "DE ACORDO COM A APURAÇÃO DO BLOG DA CAMILA BONFIM, NO G1, DEPOIMENTOS DE FUNCIONÁRIOS DO BRB APONTAM INDÍCIOS DE FRAUDE INTENCIONAL NA COMPRA DOS CRÉDITOS.",
+                                "SEGUNDO O BLOG,",
+                                "OS SERVIDORES RELATARAM À PF QUE OS PROBLEMAS INVESTIGADOS PELO BANCO CENTRAL JÁ HAVIAM SIDO PONTUADOS INTERNAMENTE",
+                                ".",
+                                "OS RELATOS REFORÇAM QUE O EX-DIRETOR NÃO SEGIU CRITÉRIOS DE COMPLIANCE E DE SEGURANÇA INTERNA DO BANCO, O QUE, NA AVALIAÇÃO DOS INVESTIGADORES, ENFRAQUECE A HIPÓTESE DE ERRO E FORTALECE A LINHA DE APURAÇÃO SOBRE FRAUDE",
+                                ".",
+                                "OS SERVIDORES ERAM SUBORDINADOS DO ENTÃO DIRETOR DE FINANÇA E CONTROLADORIA DO BRB, DARIO OSWALDO DE GARCIA JUNIOR, QUE DEIXOU O CARGO APÓS O ESCÂNDALO. ELES FORAM OUVIDOS COMO TESTEMUNHAS E NÃO COMO INVESTIGADOS."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "49",
+                    "program_name": "TOTAL VILLE STA. MARIA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "GLOBOCOP NA BR-040.",
+                                "EQUIPE DE HOJE: JAIR TANNUS E JOTTA ALVES."
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "{{ GLOBOCOP }}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "50",
+                    "program_name": "INFLA TOTAL VILLE",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "GABRIEL BUOSI.",
+                                "UM NOVO CONDOMÍNIO TOTAL VILLE ESTÁ SENDO ANUNCIADO ÀS MARGENS DA BR-040.",
+                                "A GENTE JÁ CONHECE A SITUAÇÃO DE LÁ ATUAL: MUITO TRÂNSITO, CONGESTIONAMENTO.",
+                                "NÃO HÁ SAÍDA SUFICIENTE PARA A QUANTIDADE DE VEÍCULOS."
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "A VICINAL 3-7-1, QUE LIGA O TOTAL VILLE À BR-040, NÃO FOI O SUFICIENTE.",
+                                "E COMO ISSO ESTÁ SENDO PENSADO PELO GOVERNO? A CONTRUTORA JÁ ESTÁ ANUNCIANDO AS VENDAS DAS NOVAS UNIDADES...",
+                                "GABRIEL BUOSI."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "50B",
+                    "program_name": "MORADOR",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{ }}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "50C",
+                    "program_name": "(V) ONDE VAI FICAR TOTAL VILLE2",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{ RODA ARTE }}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "50G",
+                    "program_name": "ARREDONDA INFLA TOTAL VILLE",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{REPORTER IMPROVISA A VOLTA}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "51",
+                    "program_name": "GIRO TRÂNSITO",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "AGORA, TRANSITO!"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "51A",
+                    "program_name": "NA EPIA NORTE",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "GLOBOCOP PASSANDO PELA EPIA NORTE"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "52",
+                    "program_name": "PAINÉIS PUBLICITÁRIOS",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "O TRIBUNAL DE JUSTIÇA DECLAROU PARCIALMENTE INCONSTITUCIONAIS QUATRO LEIS APROVADAS PELOS DEPUTADOS DISTRITAIS QUE P",
+                                "ERMITIAM O AUMENTO DOS PAINÉIS PUBLICITÁRIOS. OS DESEMBARGADORES ENTENDERAM QUE A NORMA INTERFERE NO ORDENAMENTO TERRITORIAL E NO CONJUNTO URBANÍSTICO TOMBADO DE BRASÍLIA. FORAM MANTIDOS APENAS DISPOSITIVOS QUE PERMITEM CONTEÚDO JORNALÍSTICO OU DE INTERESSE PÚBLICO EM PAINÉIS JÁ EXISTENTES."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "63",
+                    "program_name": "FALTA D´ÁGUA 412 SUL",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "RAIANE SENA",
+                                "-OS MORADORES DA 412 SUL ESTÃO SEM ÁGUA DESDE O ÚLTIMO SÁBADO.",
+                                "-SEGUNDO ELES, A CAESB ESTEVE NO LOCAL PARA FAZER UM CONSERTO, MAS, DURANTE O SERVIÇO, O REGISTRO GERAL DA QUADRA TERIA QUEBRADO.",
+                                "-COM A FALTA DE ÁGUA, AS CAIXAS DOS PRÉDIOS SECARAM, E OS MORADORES ESTÃO TENDO QUE COMPRAR ÁGUA OU RECORRER À CASA DE PARENTES."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "47A",
+                    "program_name": "(AV) DROGAS ITAPOA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "-DOIS HOMENS FORAM PRESOS EM FLAGRANTE ONTEM POR TRÁFICO DE DROGAS E ASSOCIAÇÃO PARA O TRÁFICO, DURANTE UMA OPERAÇÃO DA POLÍCIA CIVIL.",
+                                "-A PRISÃO ACONTECEU DEPOIS DE UMA DENÚNCIA ANÔNIMA INDICAR QUE PARTE DA COCAÍNA VENDIDA EM SOBRADINHO VINHA DO ITAPOÃ.",
+                                "-FOI AÍ QUE OS INVESTIGADORES PASSARAM A MONITORAR UM BAR NA REGIÃO.",
+                                "-DURANTE A OPERAÇÃO, A POLICIA FLAGROU UM DOS SUSPEITOS NO MOMENTO EM QUE ELE ENTREGAVA CERCA DE 250 GRAMAS DE COCAÍNA À UM CLIENTE.",
+                                "- DOIS HOMENS FORAM LEVADOS PARA A DELEGACIA DE SOBRADINHO E ENCAMINHADOS À CARCERAGEM, ONDE PERMANECEM À DISPOSIÇÃO DA JUSTIÇA."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "48",
+                    "program_name": "OPERAÇÃO DROGAS",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "MICHELE MENDES",
+                                "OPERAÇÃO CONTRA O TRÁFICO DE DROGAS. A POLÍCIA CIVIL CUMPRE AGORA PELA MANHÃ 13 MANDADOS DE PRISÃO PREVENTIVA E 14 DE BUSCA E APREENSÃO AQUI NO DF, EM GOIÁS E EM SÃO PAULO."
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "O ALVO SÃO DONOS DE DISTRIBUIDORAS DE BEBIDAS. MICHELE MENDES."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "48A",
+                    "program_name": "(AV) ILUSTRA OPERAÇÃO DF",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{ REPORTER }}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "48B",
+                    "program_name": "(AV) ILUSTRA OPERAÇÃO GO",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{ REPORTER }}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "48BB",
+                    "program_name": "(AV) ILUSTRAOPERAÇÃO SP",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "ILUSTRA COM IMAGENS DA OPERAÇÃO EM SP.",
+                                "(AV) ILUSTRA OPERAÇÃO SP",
+                                "(ID) 07BDDF-119",
+                                "RETRANCA: CLB_OPERACAO_TRAFICO_SP"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "48C",
+                    "program_name": "ARREDONDA OPERAÇÃO DROGAS",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{REPORTER IMPROVISA A VOLTA}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "55",
+                    "program_name": "ACAMPAMENTO TERRA LIVRE",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "- A GENTE FALA AGORA DO ACAMPAMENTO TERRA LIVRE, QUE ACONTECE NO EIXO CULTURAL IBERO-AMERICANO, NO EIXO MONUMENTAL.",
+                                "ELE É ORGANIZADO PELA ARTICULAÇÃO DOS POVOS INDÍGENAS DO BRASIL E É CONSIDERADO A MAIOR E MAIS IMPORTANTE MOBILIZAÇÃO DO MOVIMENTO NO PAÍS. SEGUNDO OS ORGANIZADORES, ENTRE 7 MIL E 8 MIL PESSOAS, ENTRE INDÍGENAS E NÃO INDÍGENAS, DEVEM PARTICIPAR ESTE ANO DO ACAMPAMENTO QUE VAI ATÉ SÁBADO COM REPRESENTANTES DOS 391 POVOS ORIGINÁRIOS EXISTENTES NO BRASIL PARA DEBATER A DEFESA DOS TERRITÓRIOS E DENUNCIAR AS VIOLAÇÕES AOS DIREITOS INDÍGENAS.",
+                                "- E ALÉM DA PROGRAMAÇÃO POLÍTICA, DUAS GRANDES MARCHAS ESTÃO PREVISTAS E ISSO DEVE IMPACTAR O TRÂNSITO.",
+                                "- SEGUNDO A SECRETARIA DE SEGURANÇA PÚBLICA, HOJE OS MANIFESTANTES DEVEM SE CONCENTRAR A PARTIR DAS OITO DA MANHÃ NO EIXO CULTURAL IBERO-AMERICANO, A ANTIGA FUNARTE, COM SAÍDA PREVISTA PARA AS NOVE HORAS, EM DIREÇÃO À ESPLANADA DOS MINISTÉRIOS.",
+                                "- O DESLOCAMENTO SERÁ PELA VIA N1, COM OCUPAÇÃO DAS TRÊS FAIXAS MAIS PRÓXIMAS AO CANTEIRO CENTRAL — SENDO DUAS PARA OS MANIFESTANTES E UMA PARA EQUIPES DAS FORÇAS DE SEGURANÇA.",
+                                "- A CHEGADA ESTÁ PREVISTA PARA AS DEZ HORAS, NA ALTURA DA ALAMEDA DAS BANDEIRAS, ONDE OCORRE A CONCENTRAÇÃO.",
+                                "- E NA QUINTA, OUTRA MANIFESTAÇÃO DEVE ACONTECER."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "80",
+                    "program_name": "ONÇA ATROPELADA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "- MARÍLIA MARQUES",
+                                "- A ONÇA QUE FOI VISTA CIRCULANDO PELO LAGO NORTE morreu ATROPELADA NA L4 NORTE."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "80A",
+                    "program_name": "(AV) ONÇA ATROPELADA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED LUÍSA}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "80B",
+                    "program_name": "(AV) ONÇA NO LAGO NORTE",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{ }}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "80C",
+                    "program_name": "ARREDONDA ONÇA ATROPELADA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED LUÍSA}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "93",
+                    "program_name": "MENSAGENS",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "TEM MENSAGENS CHEGANDO...."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "94",
+                    "program_name": "* BOM DIA + CRÉDITOS*",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "ACABOU O NOSSO BOM DIA DF!",
+                                "A GENTE VOLTA A SE ENCONTRAR AMANHA!",
+                                "MUITISSIMO OBRIGADO PELA SUA COMPANHIA!",
+                                "APROVEITE BEM O SEU DIA.",
+                                "GRANDE ABRAÇO E BOM DIA PRA VOCÊ!"
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "{{LUISA}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "BOM DIAAAA!"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "52",
+                    "program_name": "CREDENCIAL CNH",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "PARA UTILIZAR VAGAS PREFERENCIAIS DE ESTACIONAMENTO, PESSOAS COM DEFICIÊNCIA PRECISAM DE UMA CREDENCIAL EMITIDA PELO DETRAN. E O DOCUMENTO PODE SER UTILIZADO POR QUALQUER VEÍCULO, INCLUSIVE QUANDO A PESSOA CHAMA UM CARRO DE APLICATIVO, POR EXEMPLO.",
+                                "ISSO PORQUE O DOCUMENTO É DA PESSOA, NÃO DO VEÍCULO. ESSA MEDIDA ASSEGURA ACESSIBILIDADE E MAIS AUTONOMIA NO DIA A DIA."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "52A",
+                    "program_name": "PÉ CREDENCIAL CNH",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "SEGUNDO O DETRAN, DE JANEIRO A MARÇO DESTE ANO, MAIS DE",
+                                "MIL E 300",
+                                "CONDUTORES FORAM AUTUADOS POR ESTACIONAR EM VAGA RESERVADA A PESSOAS COM DEFICIÊNCIA."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "51",
+                    "program_name": "MENSAGENS",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "TEM MENSSAGENS CHEGANDO..."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "92",
+                    "program_name": "TEMPO 2",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{LUÍSA}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "E AGORA, PREVISÃO DO TEMPO!",
+                                "TEMPERATURA DE MOMENTO XX UMIDADE RELATIVA DO AR XX%",
+                                "MINIMA FOI DE 18°, MÁXIMA PODE CHEGAR A 30°.",
+                                "UMIDADE RELATIVA DO AR DE 40% A 99%.",
+                                "CHUVA - 15 MM."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "54",
+                    "program_name": "GIRO TRÂNSITO",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "AGORA, TRANSITO!"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "82",
+                    "program_name": "(AV) ONÇA ATROPELADA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "DAQUI A POUCO NÓS VAMOS CONVERSAR COM A POLÍCIA AMBIENTAL.",
+                                "A ONÇA VISTA NO LAGO NORTE MORREU ATROPELADA ONTEM À NOITE. O ACIDENTE FOI NA L4 NORTE, PERTO DA UNIVERSIDADE DE BRASÍLIA.",
+                                "O ANIMAL HAVIA SIDO VISTO CIRCULANDO PELO LAGO NORTE NOS ÚLTIMOS DIAS E MOBILIZAVA EQUIPES AMBIENTAIS."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "31",
+                    "program_name": "ATUALIZA ANCHIETA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "MICHELE MENDES",
+                                "VAMOS FALAR DAS MORTES NO HOSPITAL ANCHIETA."
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "31A",
+                    "program_name": "(AV) ACERVO ANCHIETA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{ }}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "31D",
+                    "program_name": "ARREDONDA ATUALIZA ANCHIETA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{REPORTER IMPROVISA A VOLTA}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "26",
+                    "program_name": "CHAMA INCÊNDIOS EDIFICAÇÕES",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "RAIANE SENA CHEGOU AO QUARTEL DO CORPO DE BOMBEIROS PARA UM FAZER UM ALERTA SOBRE INCÊNDIOS."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "08C",
+                    "program_name": "DESTAQUE /  INCÊNDIOS DOMÉSTICOS",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "RAIANE SENA, BOM DIA!"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "08D",
+                    "program_name": "DESTAQUE / TRANSPORTE ESCOLAR",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "GERALDO BECHKER, BOM DIA!"
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "x",
+                    "program_name": "GUIA IA MEC",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}",
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "x",
+                    "program_name": "(V) RECOMENDAÇÕES 2",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "x",
+                    "program_name": "MEC FALA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "x",
+                    "program_name": "COORDENADOR + ALUNO",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "x",
+                    "program_name": "ESPECIALISTA EDUCAÇÃO",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{ }}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "x",
+                    "program_name": "ARREDONDA GUIA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{REPORTER IMPROVISA A VOLTA}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "X",
+                    "program_name": "ADICIONAL MOTOCICLISTAS",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{FRED}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "GULHERME GLORIA",
+                                "-O MINISTÉRIO DO TRABALHO ATUALIZOU AS REGRAS PARA QUEM TRABALHA COM MOTOCICLETA.",
+                                "-A NOVA PORTARIA RECONHECE O RISCO NAS RUAS E GARANTE ADICIONAL DE PERICULOSIDADE DE 30% SOBRE O SALÁRIO-BASE PARA PROFISSIONAIS COM CARTEIRA ASSINADA."
+                            ],
+                            "type": "text"
+                        },
+                        {
+                            "lines": [
+                                "{{DOYLE}}"
+                            ],
+                            "type": "technical"
+                        },
+                        {
+                            "lines": [
+                                "-A REGRA NÃO VALE PARA DESLOCAMENTOS DE CASA AO TRABALHO NEM PARA ATIVIDADES EM LOCAIS FECHADOS."
+                            ],
+                            "type": "text"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "X",
+                    "program_name": "(V) REGRAS",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{REPORTER CHAMA ARTE COM NOVAS REGRAS PARA MOTOCICLISTAS}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "X",
+                    "program_name": "POVO FALA MOTOFRETISTA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{REPORTER CHAMA POVO FALA COM MOTOFRETISTAS}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "X",
+                    "program_name": "PRESIDENTE SINDICATO",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{REPORTER CHAMA SONORA PRESIDENTE DO SINDICATO DOS MOTOCICLISTAS PROFISSIONAIS}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "X",
+                    "program_name": "ADVOGADO TRABALHISTA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{REPORTER CHAMA SONORA DE ADVOGADO TRABALHISTA}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                },
+                {
+                    "pg_index": "X",
+                    "program_name": "ARREDONDA MOTOCICLISTA",
+                    "subblocks": [
+                        {
+                            "lines": [
+                                "{{REPORTER IMPROVISA A VOLTA}}"
+                            ],
+                            "type": "technical"
+                        }
+                    ]
+                }
+            ],
+            "name": "Bom Dia DF (Final)"
+        }
+    ]
+}

@@ -20,7 +20,7 @@ export function ProgramList({
         </p>
       </header>
 
-      <div className="min-h-0 flex-1 overflow-y-auto p-2">
+      <div className="scrollbar-sm min-h-0 flex-1 overflow-y-auto p-2">
         {blocks.length === 0 ? (
           <p className="px-2 py-6 text-center text-sm opacity-70">
             Nenhum bloco em slugs. Importe um roteiro em File.

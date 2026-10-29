@@ -1,0 +1,7 @@
+services:
+ - type: web
+   name: tpg-api
+   runtime: python
+   plan: free
+   buildComamnd: pip install -r requirements.txt
+   startCommand: gunicorn app:app

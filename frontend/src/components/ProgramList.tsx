@@ -16,7 +16,7 @@ export function ProgramList({
       <header className="border-b border-current/15 px-4 py-3">
         <h2 className="text-sm font-semibold">Programas</h2>
         <p className="mt-1 text-xs opacity-70">
-          Blocos com program_name e subblocks do localStorage.
+          Blocos com RETRANCA (program_name) e PG do localStorage.
         </p>
       </header>
 
@@ -33,6 +33,7 @@ export function ProgramList({
                 (sum, sub) => sum + sub.lines.length,
                 0,
               );
+              const pg = item.block.pg_index?.trim();
 
               return (
                 <li key={item.id}>
@@ -50,6 +51,7 @@ export function ProgramList({
                       {item.title}
                     </span>
                     <span className="block text-xs opacity-70">
+                      {pg ? `PG ${pg} · ` : ""}
                       {`${item.block.subblocks.length} subbloco${item.block.subblocks.length === 1 ? "" : "s"} · ${lineCount} linha${lineCount === 1 ? "" : "s"}`}
                     </span>
                   </button>

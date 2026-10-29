@@ -5,6 +5,7 @@ export interface Subblock {
 
 export interface Block {
   program_name: string;
+  pg_index: string;
   subblocks: Subblock[];
 }
 

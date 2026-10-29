@@ -60,7 +60,10 @@ export function listScriptBlocks(programs: Program[]): ScriptBlockItem[] {
       items.push({
         id: `${programIndex}-${blockIndex}`,
         title: block.program_name || program.name || "Programa sem nome",
-        block,
+        block: {
+          ...block,
+          pg_index: block.pg_index ?? "",
+        },
       });
     });
   });

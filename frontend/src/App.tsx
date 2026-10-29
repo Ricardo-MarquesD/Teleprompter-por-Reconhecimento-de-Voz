@@ -9,6 +9,11 @@ import {
   listScriptBlocks,
   type ScriptBlockItem,
 } from "./lib/scriptModel";
+import {
+  loadTeleprompterLayout,
+  saveTeleprompterLayout,
+  type TeleprompterLayout,
+} from "./lib/teleprompterLayout";
 
 function App() {
   const programs = useSlugs();
@@ -16,6 +21,9 @@ function App() {
 
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [operatorMode, setOperatorMode] = useState(false);
+  const [layout, setLayout] = useState<TeleprompterLayout>(() =>
+    loadTeleprompterLayout(),
+  );
 
   const {
     status,
@@ -41,6 +49,11 @@ function App() {
     clearTranscript();
   }
 
+  function handleLayoutChange(next: TeleprompterLayout) {
+    setLayout(next);
+    saveTeleprompterLayout(next);
+  }
+
   return (
     <div className="flex h-full min-h-0 flex-col">
       <Header
@@ -52,6 +65,8 @@ function App() {
         onToggleCapture={toggle}
         operatorMode={operatorMode}
         onOperatorModeChange={setOperatorMode}
+        layout={layout}
+        onLayoutChange={handleLayoutChange}
       />
 
       <div className="flex min-h-0 flex-1">
@@ -67,6 +82,7 @@ function App() {
             cursor={cursor}
             improvising={improvising}
             operatorMode={operatorMode}
+            layout={layout}
           />
         </main>
       </div>

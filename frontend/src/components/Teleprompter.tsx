@@ -1,11 +1,13 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { PromptLine } from "../lib/scriptModel";
+import type { TeleprompterLayout } from "../lib/teleprompterLayout";
 
 type TeleprompterProps = {
   lines: PromptLine[];
   cursor: number;
   improvising: boolean;
   operatorMode: boolean;
+  layout: TeleprompterLayout;
 };
 
 export function Teleprompter({
@@ -13,6 +15,7 @@ export function Teleprompter({
   cursor,
   improvising,
   operatorMode,
+  layout,
 }: TeleprompterProps) {
   const frameRef = useRef<HTMLDivElement>(null);
   const scrollerRef = useRef<HTMLDivElement>(null);
@@ -96,10 +99,20 @@ export function Teleprompter({
           <div
             ref={scrollerRef}
             className={`h-full w-full px-8 sm:px-12 ${
-              operatorMode ? "overflow-y-auto" : "overflow-y-auto overscroll-contain"
+              operatorMode
+                ? "overflow-y-auto"
+                : "overflow-y-auto overscroll-contain"
             }`}
           >
-            <div className="mx-auto flex min-h-full w-full max-w-3xl flex-col text-center text-2xl leading-relaxed sm:text-3xl lg:text-4xl">
+            <div
+              className="mx-auto flex min-h-full w-full max-w-3xl flex-col leading-relaxed"
+              style={{
+                fontFamily: layout.fontFamily || undefined,
+                fontSize: `${layout.fontSizePx}px`,
+                textAlign: layout.textAlign,
+                color: layout.colorNormal || undefined,
+              }}
+            >
               <div className="min-h-[42%] shrink-0 grow" aria-hidden="true" />
               <div>
                 {lines.length === 0 ? (
@@ -124,21 +137,26 @@ export function Teleprompter({
                             end !== null &&
                             cursor >= start &&
                             cursor < end;
-                          const isSpoken =
-                            end !== null && end <= cursor;
+                          const isSpoken = end !== null && end <= cursor;
 
                           return (
                             <span
                               key={`${line.id}-${index}`}
                               data-current-word={isCurrent ? "true" : undefined}
-                              className={
+                              style={
                                 line.technical
-                                  ? ""
+                                  ? undefined
                                   : isSpoken
-                                    ? "text-emerald-700/70 dark:text-emerald-300/70"
+                                    ? {
+                                        color: layout.colorSpoken,
+                                        opacity: 0.7,
+                                      }
                                     : isCurrent
-                                      ? "bg-amber-300 text-black"
-                                      : ""
+                                      ? {
+                                          backgroundColor: layout.colorCurrent,
+                                          color: layout.colorCurrentFg,
+                                        }
+                                      : undefined
                               }
                             >
                               {word.display}

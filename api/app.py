@@ -1,14 +1,34 @@
 import json
+import os
 
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+from dotenv import load_dotenv
 from flasgger import Swagger
 
 from service import BddfPayloadError, process_bddf_request
 
+load_dotenv()
 
 app = Flask(__name__)
-CORS(app, origins="http://localhost:5173")
+
+DEV = os.getenv("DEV", "false").lower() == "true"
+
+if DEV:
+    origins = [
+        "http://localhost:3000",
+        "http://localhost:5173",
+        "http://localhost:5174",
+    ]
+else:
+    origins = os.getenv("FRONTEND_URL")
+
+    if not origins:
+        raise ValueError("FRONTEND_URL não configurada no ambiente de produção")
+
+    origins = [origins]
+
+CORS(app, origins=origins)
 
 swagger = Swagger(app)
 

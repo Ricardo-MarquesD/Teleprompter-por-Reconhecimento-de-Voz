@@ -45,7 +45,7 @@ function Dropdown({label="button_test", actions, className}: DropdownProp) {
           {actions.map((action)=>(
             <button
             key={action.label}
-            className={`flex w-full items-center justify-between px-4 py-1 text-left text-sf ${action != actions[actions.length-1] ? "border-b" : ""}`}
+            className={`flex w-full items-center justify-between px-4 py-1 text-left text-sf bg-[#fffbeb] dark:bg-[#16171d] ${action != actions[actions.length-1] ? "border-b" : ""}`}
             onClick={()=>{
               action.onClick();
               setIsOpen(false);

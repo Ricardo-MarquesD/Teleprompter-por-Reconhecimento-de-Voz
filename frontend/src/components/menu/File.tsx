@@ -1,6 +1,7 @@
 import { useHotkeys } from 'react-hotkeys-hook'
 import Dropdown from './dropdown/Dropdown'
 import { useRef } from 'react';
+import { loadSlugs, saveSlugs } from '../../lib/slugsStorage';
 import { postSlugs } from '../../service/api';
 
 function File() {
@@ -13,18 +14,18 @@ function File() {
         console.log("Importando:", file.name);
         const data = await postSlugs(file);
 
-        localStorage.setItem("slugs", JSON.stringify(data));
+        saveSlugs(data);
     };
 
     const exportFile = () => {
-        const data = localStorage.getItem("slugs");
+        const stored = loadSlugs();
 
-        if (!data) {
+        if (!stored) {
             console.warn("Nenhum dado encontrado no localStorage.");
             return;
         }
 
-        const blob = new Blob([data], {
+        const blob = new Blob([JSON.stringify(stored)], {
             type: "application/json",
         });
 

@@ -75,22 +75,44 @@ def _build_program(program_payload: Mapping[str, Any]) -> dict[str, Any]:
         raise BddfPayloadError("'slugs'/'items' deve ser uma lista.")
 
     blocks: list[dict[str, Any]] = []
-    program_name = _program_name(mirror, program_payload)
+    fallback_name = _program_name(mirror, program_payload)
     for index, item in enumerate(raw_items):
         item_mapping = _ensure_mapping(item, f"slugs[{index}]")
         subblocks = _extract_subblocks(item_mapping.get("body", ""))
         if subblocks:
+            extra_fields = item_mapping.get("extraFields", [])
+            retranca = _extra_field_value(extra_fields, "RETRANCA")
+            pg_value = _extra_field_value(extra_fields, "PG")
             blocks.append(
                 {
-                    "program_name": program_name,
+                    "program_name": (retranca or fallback_name).strip(),
+                    "pg_index": str(pg_value).strip() if pg_value is not None else "",
                     "subblocks": subblocks,
                 }
             )
 
     return {
-        "name": program_name,
+        "name": fallback_name,
         "blocks": blocks,
     }
+
+
+def _extra_field_value(extra_fields: Any, label: str) -> str | None:
+    if not isinstance(extra_fields, Sequence) or isinstance(extra_fields, (str, bytes)):
+        return None
+
+    for field in extra_fields:
+        if not isinstance(field, Mapping):
+            continue
+        if field.get("label") != label:
+            continue
+        value = field.get("value")
+        if value is None:
+            return None
+        text = str(value).strip()
+        return text if text else None
+
+    return None
 
 
 def _program_name(mirror: Mapping[str, Any], program: Mapping[str, Any]) -> str:

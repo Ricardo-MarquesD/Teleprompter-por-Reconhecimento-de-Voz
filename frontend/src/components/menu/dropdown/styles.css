@@ -1,0 +1,10 @@
+@media(prefers-color-scheme: white){
+    .dropdown{
+        background-color: #fffbeb;
+    }
+}
+@media(prefers-color-scheme: dark){
+    .dropdown{
+        background-color: #16171d;
+    }
+}

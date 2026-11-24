@@ -1,0 +1,120 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Capability for TeproG windows",
+  "windows": ["main", "operator", "onair"],
+  "permissions": [
+    "core:default",
+    "core:event:default",
+    "core:window:default",
+    "core:webview:default",
+    "core:webview:allow-create-webview-window",
+    "core:window:allow-close",
+    "core:window:allow-destroy",
+    "core:window:allow-show",
+    "core:window:allow-set-title",
+    "core:window:allow-set-focus",
+    "core:path:default",
+    "opener:default",
+    "dialog:default",
+    "process:default",
+    "shell:allow-kill",
+    "http:default",
+    {
+      "identifier": "http:allow-fetch",
+      "allow": [
+        { "url": "http://127.0.0.1:*" },
+        { "url": "http://localhost:*" }
+      ]
+    },
+    {
+      "identifier": "http:allow-fetch-send",
+      "allow": [
+        { "url": "http://127.0.0.1:*" },
+        { "url": "http://localhost:*" }
+      ]
+    },
+    {
+      "identifier": "http:allow-fetch-read-body",
+      "allow": [
+        { "url": "http://127.0.0.1:*" },
+        { "url": "http://localhost:*" }
+      ]
+    },
+    {
+      "identifier": "fs:scope",
+      "allow": [
+        { "path": "$HOME/AppData/Roaming/Squad42/TeproG" },
+        { "path": "$HOME/AppData/Roaming/Squad42/TeproG/**" },
+        { "path": "$HOME/AppData/Local/Squad42/TeproG" },
+        { "path": "$HOME/AppData/Local/Squad42/TeproG/**" }
+      ]
+    },
+    {
+      "identifier": "fs:allow-exists",
+      "allow": [
+        { "path": "$HOME/AppData/Roaming/Squad42/TeproG" },
+        { "path": "$HOME/AppData/Roaming/Squad42/TeproG/**" },
+        { "path": "$HOME/AppData/Local/Squad42/TeproG" },
+        { "path": "$HOME/AppData/Local/Squad42/TeproG/**" }
+      ]
+    },
+    "fs:allow-home-read-recursive",
+    "fs:allow-home-write-recursive",
+    "fs:allow-home-meta-recursive",
+    {
+      "identifier": "fs:allow-mkdir",
+      "allow": [
+        { "path": "$HOME/AppData/Roaming/Squad42/TeproG" },
+        { "path": "$HOME/AppData/Roaming/Squad42/TeproG/**" },
+        { "path": "$HOME/AppData/Local/Squad42/TeproG" },
+        { "path": "$HOME/AppData/Local/Squad42/TeproG/**" }
+      ]
+    },
+    {
+      "identifier": "fs:allow-read-text-file",
+      "allow": [
+        { "path": "$HOME/AppData/Roaming/Squad42/TeproG/**" },
+        { "path": "$HOME/AppData/Local/Squad42/TeproG/**" }
+      ]
+    },
+    {
+      "identifier": "fs:allow-write-text-file",
+      "allow": [
+        { "path": "$HOME/AppData/Roaming/Squad42/TeproG/**" },
+        { "path": "$HOME/AppData/Local/Squad42/TeproG/**" }
+      ]
+    },
+    {
+      "identifier": "fs:allow-read-dir",
+      "allow": [
+        { "path": "$HOME/AppData/Roaming/Squad42/TeproG" },
+        { "path": "$HOME/AppData/Roaming/Squad42/TeproG/**" },
+        { "path": "$HOME/AppData/Local/Squad42/TeproG" },
+        { "path": "$HOME/AppData/Local/Squad42/TeproG/**" }
+      ]
+    },
+    {
+      "identifier": "fs:allow-stat",
+      "allow": [
+        { "path": "$HOME/AppData/Roaming/Squad42/TeproG/**" },
+        { "path": "$HOME/AppData/Local/Squad42/TeproG/**" }
+      ]
+    },
+    {
+      "identifier": "shell:allow-spawn",
+      "allow": [
+        {
+          "name": "binaries/slug_process",
+          "sidecar": true,
+          "args": false
+        },
+        {
+          "name": "binaries/tp_process",
+          "sidecar": true,
+          "args": false
+        }
+      ]
+    }
+  ]
+}

@@ -48,6 +48,7 @@ async def health():
         "status": "ok",
         "service": "tp_process",
         "active": engine.active,
+        "warm": engine.warm,
         "script_ready": script_path.exists(),
         "model_ready": model_path.exists(),
         "script_path": str(script_path),
@@ -91,7 +92,8 @@ async def teleprompter_ws(
     async def emit(message) -> None:
         payload = message.model_dump()
         await websocket.send_json(payload)
-        logger.info("WS → %s", payload)
+        # Hot path: DEBUG evita I/O de log a cada partial/position.
+        logger.debug("WS → %s", payload)
 
     engine.bind(loop, emit)
 

@@ -1,4 +1,9 @@
-"""Prepara pasta vosk/ + PATH para libvosk.dll no bundle PyInstaller."""
+"""Prepara pasta vosk/ + PATH para libvosk.dll no bundle PyInstaller.
+
+O pacote vosk faz dlopen de libvosk.dll no mesmo diretório de __file__
+(_MEIPASS/vosk/). Este hook garante que as DLLs estejam lá e no PATH
+antes de qualquer import.
+"""
 
 from __future__ import annotations
 
@@ -6,6 +11,7 @@ import os
 import shutil
 import sys
 from pathlib import Path
+
 
 _VOSK_DLLS = (
     "libvosk.dll",
@@ -26,10 +32,9 @@ def _prepare_vosk_dlls() -> None:
     vosk_dir = meipass / "vosk"
     vosk_dir.mkdir(parents=True, exist_ok=True)
 
-    # Copia DLLs que tenham caído na raiz ou em subpastas para vosk/
     for dll_name in _VOSK_DLLS:
         dest = vosk_dir / dll_name
-        if dest.exists():
+        if dest.is_file():
             continue
         candidates = [meipass / dll_name, *meipass.rglob(dll_name)]
         for src in candidates:
@@ -40,16 +45,18 @@ def _prepare_vosk_dlls() -> None:
                 except OSError:
                     continue
 
-    os.environ["PATH"] = str(vosk_dir) + os.pathsep + os.environ.get("PATH", "")
+    path_prefix = str(vosk_dir)
+    current_path = os.environ.get("PATH", "")
+    if not current_path.lower().startswith(path_prefix.lower()):
+        os.environ["PATH"] = path_prefix + os.pathsep + current_path
+
     if hasattr(os, "add_dll_directory"):
-        try:
-            os.add_dll_directory(str(vosk_dir))
-        except OSError:
-            pass
-        try:
-            os.add_dll_directory(str(meipass))
-        except OSError:
-            pass
+        for folder in (vosk_dir, meipass):
+            if folder.is_dir():
+                try:
+                    os.add_dll_directory(str(folder))
+                except OSError:
+                    pass
 
 
 _prepare_vosk_dlls()

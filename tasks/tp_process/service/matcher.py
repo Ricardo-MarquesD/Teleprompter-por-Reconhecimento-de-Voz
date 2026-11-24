@@ -12,7 +12,8 @@ DIVERGE_SCORE = 0.9
 MAX_JUMP = 4
 LOOKBACK = 6
 LOOKAHEAD = 14
-IMPROV_LOOKAHEAD = 40
+# Recovery limitado (sem varredura global do roteiro).
+IMPROV_LOOKAHEAD = 80
 DISTANCE_PENALTY = 0.35
 HYSTERESIS_TICKS = 2
 
@@ -72,7 +73,7 @@ class ScriptMatcher:
 
         spoken4 = spoken_words[-PHRASE_WINDOW:]
 
-        # Janela 1 — tracking local (ou recovery curto em improviso)
+        # Tracking local; em improviso só amplia LOOKAHEAD (sem varrer o roteiro todo).
         local_from = max(0, cursor - LOOKBACK)
         local_to = min(
             len(script_words) - PHRASE_WINDOW,
@@ -85,22 +86,6 @@ class ScriptMatcher:
             local_to,
             prefer_near=cursor,
         )
-
-        # Janela 2 — recovery ampliado se ainda fraco em improviso
-        if improvising and score < RECOVERY_SCORE:
-            g_index, g_score = best_script_window(
-                script_words,
-                spoken4,
-                0,
-                None,
-                prefer_near=cursor,
-            )
-            if g_score > score or (
-                g_score == score
-                and g_index >= 0
-                and abs(g_index - cursor) < abs(index - cursor)
-            ):
-                index, score = g_index, g_score
 
         if (
             not improvising

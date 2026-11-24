@@ -4,6 +4,7 @@ import asyncio
 import logging
 import threading
 from collections.abc import Awaitable, Callable
+from pathlib import Path
 
 from .asr_vosk import VoskAsr
 from .audio_capture import AudioCapture
@@ -19,6 +20,7 @@ from .models import (
     VisualLine,
 )
 from .script_loader import (
+    SLUG_SCRIPT_FILE,
     find_word_index_by_line,
     load_slug_script,
     script_words,
@@ -41,8 +43,10 @@ class TeleprompterEngine:
         self._matching: list[MatchingWord] = []
         self._visual_lines: list[VisualLine] = []
         self._script_tokens: list[str] = []
+        self._script_mtime: float | None = None
         self._spoken_committed: list[str] = []
         self._active = False
+        self._warm = False
         self._lock = threading.RLock()
 
         self._asr = VoskAsr(on_spoken=self._on_spoken)
@@ -52,6 +56,10 @@ class TeleprompterEngine:
     def active(self) -> bool:
         return self._active
 
+    @property
+    def warm(self) -> bool:
+        return self._warm
+
     def bind(self, loop: asyncio.AbstractEventLoop, emit: EmitHandler) -> None:
         self._loop = loop
         self._emit = emit
@@ -60,6 +68,26 @@ class TeleprompterEngine:
         self.stop()
         self._emit = None
         self._loop = None
+
+    def warmup(self) -> None:
+        """Pré-carrega roteiro + modelo Vosk (startup) para start quase imediato."""
+        with self._lock:
+            try:
+                self._load_script_cache(force=True)
+                self._asr.ensure_model()
+                self._warm = True
+                logger.info(
+                    "Warmup ok: %s palavras, modelo=%s",
+                    len(self._matching),
+                    self._asr.model_path,
+                )
+            except FileNotFoundError as error:
+                self._warm = False
+                logger.warning("Warmup parcial (recurso ausente): %s", error)
+            except Exception:
+                self._warm = False
+                logger.exception("Falha no warmup do tp_process")
+                raise
 
     def handle_message(self, message: OperationalIn | PositionJumpIn) -> list[OutgoingMessage]:
         if isinstance(message, OperationalIn):
@@ -73,10 +101,8 @@ class TeleprompterEngine:
         with self._lock:
             self._stop_unlocked()
             try:
-                script = load_slug_script()
-                self._matching = list(script.matching_words)
-                self._visual_lines = list(script.visual_lines)
-                self._script_tokens = script_words(self._matching)
+                # Só relê disco se cache vazio ou arquivo mudou (stat barato).
+                self._load_script_cache(force=False)
                 if not self._matching:
                     raise ValueError("matching_words vazio no roteiro")
 
@@ -90,15 +116,17 @@ class TeleprompterEngine:
                 self._spoken_committed = []
 
                 config = load_device_config()
+                # Modelo já warm → só cria novo recognizer.
                 self._asr.reset()
                 self._capture.start(config)
 
                 self._active = True
                 logger.info(
-                    "Teleprompter ativo line_id=%s cursor=%s device_id=%s",
+                    "Teleprompter ativo line_id=%s cursor=%s device_id=%s warm=%s",
                     line_id,
                     cursor,
                     config.device_id,
+                    self._warm,
                 )
 
                 outgoing: list[OutgoingMessage] = [
@@ -127,11 +155,9 @@ class TeleprompterEngine:
 
     def jump_to_line(self, line_id: str) -> list[OutgoingMessage]:
         with self._lock:
-            if not self._matching or not self._visual_lines:
-                script = load_slug_script()
-                self._matching = list(script.matching_words)
-                self._visual_lines = list(script.visual_lines)
-                self._script_tokens = script_words(self._matching)
+            self._load_script_cache(force=False)
+            if not self._matching:
+                raise ValueError("matching_words vazio no roteiro")
 
             cursor = find_word_index_by_line(
                 self._matching,
@@ -144,12 +170,32 @@ class TeleprompterEngine:
             logger.info("Salto de lauda para line_id=%s cursor=%s", line_id, cursor)
 
             outgoing: list[OutgoingMessage] = [StatusOut(state="tracking")]
-            if self._matching:
-                index = max(0, min(cursor, len(self._matching) - 1))
-                if cursor > 0:
-                    index = cursor - 1
-                outgoing.append(self._position_for_index(index))
+            index = max(0, min(cursor, len(self._matching) - 1))
+            if cursor > 0:
+                index = cursor - 1
+            outgoing.append(self._position_for_index(index))
             return outgoing
+
+    def _load_script_cache(self, force: bool = False) -> None:
+        path = Path(SLUG_SCRIPT_FILE)
+        if not path.exists():
+            raise FileNotFoundError(f"Roteiro não encontrado: {path}")
+
+        mtime = path.stat().st_mtime
+        if (
+            not force
+            and self._matching
+            and self._visual_lines
+            and self._script_tokens
+            and self._script_mtime == mtime
+        ):
+            return
+
+        script = load_slug_script(path)
+        self._matching = list(script.matching_words)
+        self._visual_lines = list(script.visual_lines)
+        self._script_tokens = script_words(self._matching)
+        self._script_mtime = mtime
 
     def _on_audio_chunk(self, chunk: bytes) -> None:
         if not self._active:
@@ -163,7 +209,11 @@ class TeleprompterEngine:
         if not self._active or not tokens:
             return
 
+        messages: list[OutgoingMessage] = []
         with self._lock:
+            if not self._active:
+                return
+
             if is_final:
                 self._spoken_committed.extend(tokens)
                 if len(self._spoken_committed) > SPOKEN_TAIL * 4:
@@ -180,11 +230,10 @@ class TeleprompterEngine:
             )
             self._follow = result.state
 
-            messages: list[OutgoingMessage] = []
             if result.status_changed:
                 state = "improvising" if result.state.improvising else "tracking"
                 messages.append(StatusOut(state=state))
-                logger.info("Status → %s", state)
+                logger.debug("Status → %s", state)
 
             if (
                 not result.state.improvising
@@ -192,13 +241,14 @@ class TeleprompterEngine:
                 and result.state.cursor > 0
             ):
                 messages.append(self._position_for_index(result.state.cursor - 1))
-                logger.info(
+                logger.debug(
                     "Posição word_id=%s line_id=%s cursor=%s",
                     messages[-1].word_id if isinstance(messages[-1], PositionOut) else "?",
                     getattr(messages[-1], "line_id", "?"),
                     result.state.cursor,
                 )
 
+        # Emite fora do lock para não bloquear o worker de áudio/ASR.
         for message in messages:
             self._emit_async(message)
 

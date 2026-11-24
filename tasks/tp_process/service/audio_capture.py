@@ -59,10 +59,12 @@ class AudioCapture:
                     except queue.Full:
                         pass
 
+            # 1600 samples @ 16 kHz ≈ 100 ms (antes: 4000 ≈ 250 ms).
+            blocksize = max(512, min(1600, sample_rate // 10))
             try:
                 self._stream = sd.RawInputStream(
                     samplerate=sample_rate,
-                    blocksize=4000,
+                    blocksize=blocksize,
                     device=device,
                     dtype="int16",
                     channels=channels,
@@ -84,10 +86,11 @@ class AudioCapture:
             )
             self._worker.start()
             logger.info(
-                "Captura iniciada device_id=%s rate=%s channels=%s",
+                "Captura iniciada device_id=%s rate=%s channels=%s blocksize=%s",
                 device,
                 sample_rate,
                 channels,
+                blocksize,
             )
 
     def _worker_loop(self) -> None:

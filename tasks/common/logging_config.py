@@ -2,7 +2,11 @@ import logging
 from logging.handlers import RotatingFileHandler
 from pathlib import Path
 
-def setup_logging(log_dir: Path, file_name: str):
+def setup_logging(
+    log_dir: Path,
+    file_name: str,
+    level: int = logging.INFO,
+):
     log_dir.mkdir(parents=True, exist_ok=True)
 
     log_file = log_dir / f"{file_name}.log"
@@ -13,6 +17,7 @@ def setup_logging(log_dir: Path, file_name: str):
         backupCount=5,
         encoding="utf-8"
     )
+    handler.setLevel(level)
 
     formatter = logging.Formatter(
         fmt=(
@@ -27,7 +32,7 @@ def setup_logging(log_dir: Path, file_name: str):
     handler.setFormatter(formatter)
 
     logging.basicConfig(
-        level=logging.INFO,
+        level=level,
         handlers=[handler],
         force=True
     )

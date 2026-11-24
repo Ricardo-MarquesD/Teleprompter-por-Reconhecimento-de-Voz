@@ -6,14 +6,17 @@ from contextlib import asynccontextmanager
 
 import uvicorn
 from fastapi import FastAPI
+from fastapi.concurrency import run_in_threadpool
 
 from common.logging_config import setup_logging
 from common.paths import LOCAL_DIR, LOG_TP_DIR, MODELS_DIR
 from tp_process.router import router, ws_router
 from tp_process.security import TOKEN
 from tp_process.service.device_config import ensure_device_config
+from tp_process.service.engine import engine
 
-setup_logging(LOG_TP_DIR, "tp_process")
+# DEBUG no arquivo: WS → / posição / status do caminho quente.
+setup_logging(LOG_TP_DIR, "tp_process", level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 
@@ -37,6 +40,13 @@ async def lifespan(_app: FastAPI):
         logger.warning(
             'Modelo ausente — baixe o Vosk pt-BR e renomeie a pasta para "model-pt".'
         )
+
+    # Pré-carga em thread: evita 1–2s no primeiro operational:true.
+    try:
+        await run_in_threadpool(engine.warmup)
+    except Exception as error:
+        logger.warning("Warmup adiado — será tentado no start: %s", error)
+
     yield
 
 
